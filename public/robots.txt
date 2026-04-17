@@ -1,0 +1,61 @@
+# Robots.txt for crossfitsouthie.com
+# https://crossfitsouthie.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://crossfitsouthie.com/sitemap.xml
+
+# Crawl delay (optional, be respectful)
+Crawl-delay: 1
+
+# Block access to staging/development environments if any
+# Disallow: /staging/
+# Disallow: /dev/
+# Disallow: /admin/
+
+# Specific bot instructions
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 1
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 1
+
+# Block bad bots (optional)
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+# Block common scrapers
+User-agent:-scrapy
+Disallow: /
+
+User-agent: masscan
+Disallow: /
+
+# Host directive
+Host: https://crossfitsouthie.com

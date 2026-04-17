@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://crossfitsouthie.com/</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://crossfitsouthie.com/"/>
+  </url>
+  <url>
+    <loc>https://crossfitsouthie.com/team</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://crossfitsouthie.com/team"/>
+  </url>
+  <url>
+    <loc>https://crossfitsouthie.com/pricing</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://crossfitsouthie.com/pricing"/>
+  </url>
+  <url>
+    <loc>https://crossfitsouthie.com/contact</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://crossfitsouthie.com/contact"/>
+  </url>
+  <url>
+    <loc>https://crossfitsouthie.com/programs/crossfit</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://crossfitsouthie.com/programs/crossfit"/>
+  </url>
+  <url>
+    <loc>https://crossfitsouthie.com/programs/hyrox</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://crossfitsouthie.com/programs/hyrox"/>
+  </url>
+  <url>
+    <loc>https://crossfitsouthie.com/programs/strive-x-hiit</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://crossfitsouthie.com/programs/strive-x-hiit"/>
+  </url>
+  <url>
+    <loc>https://crossfitsouthie.com/programs/ssc</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://crossfitsouthie.com/programs/ssc"/>
+  </url>
+  <url>
+    <loc>https://crossfitsouthie.com/programs/fundamentals</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://crossfitsouthie.com/programs/fundamentals"/>
+  </url>
+  <url>
+    <loc>https://crossfitsouthie.com/programs/personal-training</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://crossfitsouthie.com/programs/personal-training"/>
+  </url>
+  <url>
+    <loc>https://crossfitsouthie.com/coaches/chris-gosler</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://crossfitsouthie.com/coaches/amy-gosler</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+</urlset>
