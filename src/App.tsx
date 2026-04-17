@@ -239,47 +239,46 @@ const Programs = () => (
           </div>
         </Link>
 
-        {/* Row 2: SSC, FUNDAMENTALS */}
-        {/* SSC */}
+        {/* Row 2: FUNDAMENTALS, STRENGTH & CONDITIONING, PRIVATE COACHING */}
+        {/* FUNDAMENTALS */}
         <Link to={`/programs/${programs[4].slug}`} className="group relative overflow-hidden rounded-xl min-h-[220px] lg:min-h-[320px] block" style={{ backgroundColor: '#232a3a' }}>
           <img
             src={programs[4].image}
-            alt="Strength & Conditioning"
-            className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0c1322] via-[#0c1322]/60 to-transparent" />
-          <div className="absolute inset-0 flex flex-col justify-end p-6 sm:p-8">
-            <h3 className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl font-black text-white uppercase mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>SSC</h3>
-            <p className="text-sm sm:text-base" style={{ color: 'rgba(220, 226, 247, 0.8)' }}>{programs[4].shortDescription}</p>
-          </div>
-        </Link>
-
-        {/* FUNDAMENTALS */}
-        <Link to={`/programs/${programs[5].slug}`} className="group relative overflow-hidden rounded-xl min-h-[220px] lg:min-h-[320px] block" style={{ backgroundColor: '#232a3a' }}>
-          <img
-            src={programs[5].image}
             alt="Fundamentals program"
             className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0c1322] via-[#0c1322]/60 to-transparent" />
           <div className="absolute inset-0 flex flex-col justify-end p-6 sm:p-8">
             <h3 className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl font-black text-white uppercase mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>FUNDAMENTALS</h3>
-            <p className="text-sm sm:text-base" style={{ color: 'rgba(220, 226, 247, 0.8)' }}>{programs[5].shortDescription}</p>
+            <p className="text-sm sm:text-base" style={{ color: 'rgba(220, 226, 247, 0.8)' }}>{programs[4].shortDescription}</p>
           </div>
         </Link>
 
-        {/* Row 3: PRIVATE COACHING (last position) */}
-        {/* Private Coaching */}
+        {/* STRENGTH & CONDITIONING */}
         <Link to={`/programs/${programs[3].slug}`} className="group relative overflow-hidden rounded-xl min-h-[220px] lg:min-h-[320px] block" style={{ backgroundColor: '#232a3a' }}>
           <img
             src={programs[3].image}
+            alt="Strength & Conditioning"
+            className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0c1322] via-[#0c1322]/60 to-transparent" />
+          <div className="absolute inset-0 flex flex-col justify-end p-6 sm:p-8">
+            <h3 className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl font-black text-white uppercase mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>STRENGTH & CONDITIONING</h3>
+            <p className="text-sm sm:text-base" style={{ color: 'rgba(220, 226, 247, 0.8)' }}>{programs[3].shortDescription}</p>
+          </div>
+        </Link>
+
+        {/* PRIVATE COACHING */}
+        <Link to={`/programs/${programs[5].slug}`} className="group relative overflow-hidden rounded-xl min-h-[220px] lg:min-h-[320px] block" style={{ backgroundColor: '#232a3a' }}>
+          <img
+            src={programs[5].image}
             alt="1-on-1 coaching session"
             className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0c1322] via-[#0c1322]/60 to-transparent" />
           <div className="absolute inset-0 flex flex-col justify-end p-6 sm:p-8">
             <h3 className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl font-black text-white uppercase mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>PRIVATE COACHING</h3>
-            <p className="text-sm sm:text-base" style={{ color: 'rgba(220, 226, 247, 0.8)' }}>{programs[3].shortDescription}</p>
+            <p className="text-sm sm:text-base" style={{ color: 'rgba(220, 226, 247, 0.8)' }}>{programs[5].shortDescription}</p>
           </div>
         </Link>
       </div>
@@ -474,7 +473,7 @@ const coaches = [
     achievements: ['D1 Swimming - Boston University', 'EMT', 'Starting Paramedic School in May', 'Friday morning coach (5am & 6am)']
   },
   {
-    name: 'Shannon Scafuri',
+    name: 'Shanna Scafuri',
     slug: 'shannon-scafuri',
     role: 'Coach',
     image: '/imgs/shannon.png',
@@ -737,7 +736,7 @@ const ReviewStats = () => (
             <svg className="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
             </svg>
-            <span className="text-3xl font-black text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>1000+</span>
+            <span className="text-3xl font-black text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>400+</span>
           </div>
           <p className="text-sm" style={{ color: 'rgba(220, 226, 247, 0.6)' }}>Active Members</p>
         </div>
@@ -854,6 +853,217 @@ const FAQ = () => {
               What to Expect
             </Link>
           </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+// Testimonials Section
+const testimonials = [
+  {
+    name: 'Mike R.',
+    quote: 'CrossFit Southie changed my life. I lost 40 pounds and gained confidence I never knew I had. The coaches push you to be your best while the community keeps you coming back.'
+  },
+  {
+    name: 'Sarah T.',
+    quote: 'I was intimidated by CrossFit but the Fundamentals program made the transition seamless. Now I look forward to every class and have made lifelong friends here.'
+  },
+  {
+    name: 'James C.',
+    quote: 'The programming is smart, the coaches are knowledgeable, and the community is unmatched. I have competed in two CrossFit Opens since joining.'
+  },
+  {
+    name: 'Amanda L.',
+    quote: 'As a busy mom, I needed a workout that fit my schedule and actually worked. CrossFit Southie delivered. The 5am crew has become my second family.'
+  }
+]
+
+const Testimonials = () => {
+  return (
+    <section className="py-16 md:py-24 px-6 md:px-8" style={{ backgroundColor: '#0c1322' }}>
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-white mb-4" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+            WHAT OUR MEMBERS SAY
+          </h2>
+          <p className="text-lg max-w-2xl mx-auto" style={{ color: 'rgba(220, 226, 247, 0.7)' }}>
+            Real stories from real athletes who found their strength at CrossFit Southie
+          </p>
+        </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {testimonials.map((testimonial, index) => (
+            <div
+              key={index}
+              className="p-6 rounded-xl overflow-hidden"
+              style={{ backgroundColor: '#141b2b' }}
+            >
+              {/* Quote Icon */}
+              <div className="mb-4">
+                <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" style={{ color: '#dc2626' }}>
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                </svg>
+              </div>
+              {/* Quote Text */}
+              <p className="text-base leading-relaxed" style={{ color: 'rgba(220, 226, 247, 0.9)' }}>
+                "{testimonial.quote}"
+              </p>
+            </div>
+          ))}
+        </div>
+        {/* CTA */}
+        <div className="text-center mt-12">
+          <p className="text-lg mb-4" style={{ color: 'rgba(220, 226, 247, 0.7)' }}>
+            Ready to write your own success story?
+          </p>
+          <a
+            href="https://crossfitsouthie.sites.zenplanner.com/freeTrial.cfm"
+            className="inline-block px-8 py-4 text-lg font-bold uppercase tracking-wide transition-all hover:scale-105 text-white"
+            style={{ backgroundColor: '#dc2626', fontFamily: "'Space Grotesk', sans-serif" }}
+          >
+            Start Your Free Trial
+          </a>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+// Press & Achievements Section
+const PressSection = () => {
+  const achievements = [
+    { year: '2026', title: 'CrossFit Open', description: '20% of our roster finished in the top 5% of athletes worldwide' },
+    { year: '2026', title: 'Wodapalooza Miami', description: 'Team winners in the Intermediate Female and Co-Ed Pairs divisions' },
+    { year: '2026', title: 'CrossFit Quarterfinals', description: '38 athletes qualified' },
+    { year: '2026', title: 'Age Group Quarterfinals', description: 'Athletes qualifying in all 8 age groups from 35-70+' },
+  ]
+
+  return (
+    <section className="py-16 md:py-24 px-6 md:px-8" style={{ backgroundColor: '#141b2b' }}>
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-white mb-4" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+            RECOGNIZED EXCELLENCE
+          </h2>
+          <p className="text-lg max-w-2xl mx-auto" style={{ color: 'rgba(220, 226, 247, 0.7)' }}>
+            From local competitions to the CrossFit Games stage, our athletes consistently prove that hard work pays off.
+          </p>
+        </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {achievements.map((item, index) => (
+            <div
+              key={index}
+              className="p-6 rounded-xl text-center"
+              style={{ backgroundColor: '#191f2f' }}
+            >
+              <div className="text-4xl font-black mb-2" style={{ color: '#dc2626', fontFamily: "'Space Grotesk', sans-serif" }}>
+                {item.year}
+              </div>
+              <h3 className="text-lg font-bold text-white mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+                {item.title}
+              </h3>
+              <p className="text-sm" style={{ color: 'rgba(220, 226, 247, 0.7)' }}>
+                {item.description}
+              </p>
+            </div>
+          ))}
+        </div>
+        <div className="mt-12 text-center">
+          <a
+            href="https://crossfitsouthie.sites.zenplanner.com/freeTrial.cfm"
+            className="inline-block px-8 py-4 text-lg font-bold uppercase tracking-wide transition-all hover:scale-105 text-white"
+            style={{ backgroundColor: '#dc2626', fontFamily: "'Space Grotesk', sans-serif" }}
+          >
+            Join Us & Write Your Own Story
+          </a>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+// Blog/News Section
+const blogPosts = [
+  {
+    slug: 'march-2026-shoutouts',
+    title: 'Southie Shout Outs! March 2026 Highlights',
+    date: 'March 31, 2026',
+    excerpt: 'Incredible CrossFit Open and Wodapalooza performances from our CFS athletes. Carly Stote finished 102nd worldwide out of 99,000+ women, and our teams brought home championships!',
+    category: 'Competition'
+  },
+  {
+    slug: 'coachs-corner-elim-thomas',
+    title: "Coach's Corner - Elim Thomas!!!",
+    date: 'April 1, 2026',
+    excerpt: 'Meet our amazing coach Elim Thomas! With 7 years of CrossFit coaching experience and a passion for this community, we\'re lucky to have him on the CFS and Strive coaching staff.',
+    category: "Coach's Corner",
+    images: ['/imgs/1.png', '/imgs/2.png', '/imgs/3.png', '/imgs/4.png', '/imgs/5.png', '/imgs/6.png']
+  },
+  {
+    slug: 'team-throwdown-2026',
+    title: '2026 In-House Team Throwdown Registration is OPEN!',
+    date: 'April 15, 2026',
+    excerpt: 'Registration is officially open for our 2026 In-House Team Throwdown on Saturday, May 9th! Co-ed teams of 3 compete across Rx, Scaled, and Advanced divisions — plus a BBQ Parking Lot Party after!',
+    category: 'Events',
+    images: ['/imgs/1.png', '/imgs/2.png', '/imgs/3.png', '/imgs/4.png', '/imgs/5.png', '/imgs/6.png']
+  }
+]
+
+const BlogSection = () => {
+  return (
+    <section className="py-16 md:py-24 px-6 md:px-8" style={{ backgroundColor: '#0c1322' }}>
+      <div className="max-w-6xl mx-auto">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-6 mb-12">
+          <div>
+            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>LATEST NEWS</h2>
+            <p className="mt-4 text-lg max-w-md" style={{ color: 'rgba(220, 226, 247, 0.6)' }}>Stay updated with the latest from CrossFit Southie.</p>
+          </div>
+          <Link
+            to="/blog"
+            className="font-bold uppercase tracking-widest flex items-center gap-2 hover:gap-4 transition-all"
+            style={{ color: '#dc2626', fontFamily: "'Space Grotesk', sans-serif" }}
+          >
+            View All Posts →
+          </Link>
+        </div>
+        <div className="grid md:grid-cols-3 gap-6">
+          {blogPosts.map((post, index) => (
+            <Link
+              key={index}
+              to={`/blog/${post.slug}`}
+              className="group block rounded-xl overflow-hidden transition-all hover:scale-105"
+              style={{ backgroundColor: '#141b2b' }}
+            >
+              <div className="aspect-video" style={{ backgroundColor: '#232a3a' }}>
+                {post.images && post.images[0] ? (
+                  <img src={post.images[0]} alt={post.title} className="w-full h-full object-cover" />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center">
+                    <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ color: 'rgba(220, 226, 247, 0.3)' }}>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                    </svg>
+                  </div>
+                )}
+              </div>
+              <div className="p-6">
+                <span
+                  className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wide rounded-full mb-3"
+                  style={{ backgroundColor: '#dc2626', color: 'white' }}
+                >
+                  {post.category}
+                </span>
+                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-red-500 transition-colors" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+                  {post.title}
+                </h3>
+                <p className="text-sm mb-4" style={{ color: 'rgba(220, 226, 247, 0.7)' }}>
+                  {post.excerpt}
+                </p>
+                <p className="text-xs" style={{ color: 'rgba(220, 226, 247, 0.5)' }}>
+                  {post.date}
+                </p>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </section>
@@ -1096,6 +1306,15 @@ const Navigation = () => {
                 >
                   Contact Us
                 </Link>
+                <a
+                  href="https://www.waiverfile.com/b/CrossFitSouthie/Waiver.aspx?formid=7b41bbe4-6aca-414e-95ad-5d1ca863c31c"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-4 py-2 text-white hover:bg-gray-800 text-sm font-bold uppercase"
+                  onClick={() => setInfoOpen(false)}
+                >
+                  Waiver
+                </a>
               </div>
             )}
           </div>
@@ -1151,6 +1370,7 @@ const Navigation = () => {
                 <Link to="/team" className="block text-white hover:text-gray-300 transition-colors text-sm font-bold uppercase">Our Team</Link>
                 <Link to="/pricing" className="block text-white hover:text-gray-300 transition-colors text-sm font-bold uppercase">Pricing</Link>
                 <Link to="/contact" className="block text-white hover:text-gray-300 transition-colors text-sm font-bold uppercase">Contact Us</Link>
+                <a href="https://www.waiverfile.com/b/CrossFitSouthie/Waiver.aspx?formid=7b41bbe4-6aca-414e-95ad-5d1ca863c31c" target="_blank" rel="noopener noreferrer" className="block text-white hover:text-gray-300 transition-colors text-sm font-bold uppercase">Waiver</a>
               </div>
             )}
             <a
@@ -1400,14 +1620,43 @@ const PricingPage = () => {
   )
 }
 
-// Team Page
-const TeamPage = () => (
-  <div className="font-sans pt-20">
-    <Navigation />
-    <Coaches />
-    <Footer />
-  </div>
-)
+// Team Page - Shows all coaches by default
+const TeamPage = () => {
+  const [showAll] = useState(true)
+  const visibleCoaches = showAll ? coaches : coaches.slice(0, 4)
+
+  return (
+    <div className="font-sans pt-20">
+      <Navigation />
+      <section className="py-4 px-6 md:px-8" style={{ backgroundColor: '#0c1322' }}>
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-6">
+            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-white mb-4" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>OUR TEAM</h2>
+            <p className="text-lg" style={{ color: 'rgba(220, 226, 247, 0.7)' }}>Professional, educated, and dedicated to helping you achieve your goals</p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+            {visibleCoaches.map((coach) => (
+              <Link key={coach.name} to={`/coaches/${coach.slug}`} className="group block text-left">
+                <div className="w-full aspect-square mx-auto mb-3 sm:mb-4 overflow-hidden rounded-lg" style={{ backgroundColor: '#232a3a' }}>
+                  {coach.image ? (
+                    <img src={coach.image} alt={coach.name} className="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500" />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center text-xl sm:text-2xl font-bold text-white">
+                      {coach.name.split(' ').map(n => n[0]).join('')}
+                    </div>
+                  )}
+                </div>
+                <h3 className="text-sm sm:text-base md:text-lg font-bold text-white text-center" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>{coach.name}</h3>
+                <p className="font-bold text-xs sm:text-sm uppercase tracking-wider mt-1 text-center" style={{ color: '#dc2626' }}>{coach.role}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+      <Footer />
+    </div>
+  )
+}
 
 // Coach Detail Page with SEO Optimization
 const CoachDetail = () => {
@@ -2028,6 +2277,193 @@ const ContactPage = () => {
   )
 }
 
+// Blog Page
+const BlogPage = () => {
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+    }, 0)
+  }, [])
+
+  const [selectedPost, setSelectedPost] = useState<string | null>(null)
+
+  const getPostContent = (slug: string) => {
+    if (slug === 'coachs-corner-elim-thomas') {
+      return {
+        title: "Coach's Corner - Elim Thomas!!!",
+        date: 'April 1, 2026',
+        category: "Coach's Corner",
+        content: `We are so thrilled to have Elim on the CFS and Strive Coaching Staff. Elim started his CrossFit journey in 2018 and he has been coaching since 2019.
+
+Elim puts forth so much care into working with this community, that along with his 7 years of CrossFit coaching experience makes for an amazing addition here and we're lucky to have him!
+
+Elim holds a CF-Level 1 Certification, CPR/AED Certification and he studied Kinesiology at Gordon College. You can catch Elim on Fridays at 11, 12, 4, 5 and 6PM!`,
+        images: ['/imgs/1.png', '/imgs/2.png', '/imgs/3.png', '/imgs/4.png', '/imgs/5.png', '/imgs/6.png']
+      }
+    }
+    if (slug === 'march-2026-shoutouts') {
+      return {
+        title: 'Southie Shout Outs! March 2026 Highlights',
+        date: 'March 31, 2026',
+        category: 'Competition',
+        content: `March has had some amazing highlights that we'd love to share with our community. We had a great showing for the CrossFit Open this year.
+
+We saw a lot of PRs including Abby C using the 14# wall ball for the first time in a wod and Josh Chase getting his first Ring MUP and then getting 11 more in 26.2.
+
+Carly Stote had an incredible overall finish of 102 out of over 99,000 women in the world that completed the open. She took 13th in the Open WOD 26.1!
+
+More than 50% of our Open Roster is moving onto the next stage in the CrossFit Open - Quarterfinals!
+
+46 CFS athletes landed in the top 25% of athletes in THE WORLD through the open. 38 of these athletes qualified in the individual division.
+
+12 athletes (20% of our roster) were in the top 5% of athletes worldwide, which is 4x higher then the national average.
+
+For the age group qualifiers, we had athletes qualify in all 8 age groupings beginning at 35 and going through to the 70+ division.
+
+CFS also represented in Wodapalooza this month, which is one of the largest CrossFit competitions in the world.
+
+Carly Stote and Matthew Carl won in the Intermediate Co-ed Pairs Division.
+
+Ana Schwarz, Christina Muccio and Elise Makowski took the top spot for the Female Intermediate Team competition.
+
+Austin Amery, Joe Adamek and Matt Early qualified and competed in the RX division this year. This was the first year for them competing in the RX division and they crushed it!
+
+The culture and environment has helped us push each other to a whole other level. Let's go get it in Quarterfinals!`
+      }
+    }
+    if (slug === 'team-throwdown-2026') {
+      return {
+        title: '2026 In-House Team Throwdown Registration is OPEN!',
+        date: 'April 15, 2026',
+        category: 'Events',
+        content: `Registration is officially OPEN for the 2026 CrossFit Southie In-House Team Throwdown!
+
+DATE: Saturday, May 9th
+COST: $20 per person
+
+After the competition we will be having a BBQ Parking Lot Party — food, fun, and community all day long!
+
+TEAM FORMAT
+Co-ed teams of 3: 2 Rx or Advanced athletes + 1 Scaled athlete.
+
+DIVISIONS
+
+Rx Division
+Women: 135# Deadlift, 65# Clean & Jerk, 45# Overhead Squat, Chest-to-Bar Pull-Ups, Toes-to-Bar
+Men: 225# Deadlift, 115# Clean & Jerk, 75# Overhead Squat, Chest-to-Bar Pull-Ups, Toes-to-Bar
+
+Scaled Division
+Women: 95# Deadlift, 45# Clean & Jerk, 35# Overhead Squat, Ring Rows, Sit-Ups
+Men: 155# Deadlift, 75# Clean & Jerk, 55# Overhead Squat, Ring Rows, Sit-Ups
+
+Advanced Division
+Women: 155# Deadlift, 85# Clean & Jerk, 65# Overhead Squat, Bar Muscle-Ups, Toes-to-Bar
+Men: 275# Deadlift, 155# Clean & Jerk, 95# Overhead Squat, Bar Muscle-Ups, Toes-to-Bar
+
+Registration is open now — grab your team and sign up! Link in bio and at the front desk. See you May 9th!`,
+        images: ['/imgs/1.png', '/imgs/2.png', '/imgs/3.png', '/imgs/4.png', '/imgs/5.png', '/imgs/6.png']
+      }
+    }
+    return null
+  }
+
+  return (
+    <div className="font-sans pt-20">
+      <Navigation />
+      <section className="py-16 px-6 md:px-8" style={{ backgroundColor: '#0c1322' }}>
+        <div className="max-w-4xl mx-auto">
+          {!selectedPost ? (
+            <>
+              <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-white mb-4" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+                LATEST NEWS
+              </h1>
+              <p className="text-lg mb-12" style={{ color: 'rgba(220, 226, 247, 0.7)' }}>
+                Stay updated with the latest from CrossFit Southie
+              </p>
+              <div className="space-y-8">
+                {blogPosts.map((post, index) => (
+                  <div key={index} className="p-8 rounded-xl" style={{ backgroundColor: '#141b2b' }}>
+                    {post.images && post.images[0] && (
+                      <img src={post.images[0]} alt={post.title} className="w-full h-64 object-cover rounded-lg mb-6" />
+                    )}
+                    <span
+                      className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wide rounded-full mb-4"
+                      style={{ backgroundColor: '#dc2626', color: 'white' }}
+                    >
+                      {post.category}
+                    </span>
+                    <h2 className="text-2xl font-bold text-white mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+                      {post.title}
+                    </h2>
+                    <p className="text-sm mb-4" style={{ color: 'rgba(220, 226, 247, 0.5)' }}>
+                      {post.date}
+                    </p>
+                    <p className="text-base mb-4" style={{ color: 'rgba(220, 226, 247, 0.8)' }}>
+                      {post.excerpt}
+                    </p>
+                    <button
+                      onClick={() => setSelectedPost(post.slug)}
+                      className="inline-block font-bold uppercase tracking-wide text-sm hover:text-red-500 transition-colors"
+                      style={{ color: '#dc2626' }}
+                    >
+                      Read More →
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </>
+          ) : (
+            <>
+              <button
+                onClick={() => setSelectedPost(null)}
+                className="inline-flex items-center gap-2 mb-8 font-bold uppercase tracking-wide text-sm hover:text-red-500 transition-colors"
+                style={{ color: '#dc2626' }}
+              >
+                ← Back to All Posts
+              </button>
+              {(() => {
+                const post = getPostContent(selectedPost)
+                if (!post) return null
+                return (
+                  <>
+                    <span
+                      className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wide rounded-full mb-4"
+                      style={{ backgroundColor: '#dc2626', color: 'white' }}
+                    >
+                      {post.category}
+                    </span>
+                    <h1 className="text-3xl md:text-4xl font-black text-white mb-4" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+                      {post.title}
+                    </h1>
+                    <p className="text-sm mb-8" style={{ color: 'rgba(220, 226, 247, 0.5)' }}>
+                      {post.date}
+                    </p>
+                    {post.images && (
+                      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+                        {post.images.map((img, idx) => (
+                          <img key={idx} src={img} alt={`${post.title} - Image ${idx + 1}`} className="w-full h-48 object-cover rounded-lg" />
+                        ))}
+                      </div>
+                    )}
+                    <div className="prose prose-invert max-w-none">
+                      {post.content.split('\n\n').map((paragraph, idx) => (
+                        <p key={idx} className="text-base mb-4 leading-relaxed" style={{ color: 'rgba(220, 226, 247, 0.9)' }}>
+                          {paragraph}
+                        </p>
+                      ))}
+                    </div>
+                  </>
+                )
+              })()}
+            </>
+          )}
+        </div>
+      </section>
+      <Footer />
+    </div>
+  )
+}
+
 function App() {
   return (
     <div className="font-sans" style={{ backgroundColor: '#0c1322' }}>
@@ -2043,6 +2479,8 @@ function App() {
             <Coaches />
             <ScheduleCTA />
             <ReviewStats />
+            <Testimonials />
+            <PressSection />
             <FAQ />
             <InstagramFeed />
             <Location />
