@@ -145,10 +145,10 @@ const programs = [
     image: '/imgs/hyrox.jpg'
   },
   {
-    name: 'STRIVE-X',
+    name: 'Strive-X Hiit',
     slug: 'strive-x-hiit',
     shortDescription: 'Our signature conditioning-focused program. Low skill, maximum effort, total sweat.',
-    fullDescription: 'STRIVE-X HIIT is high-intensity interval training that burns calories and improves cardiovascular fitness. Perfect for those new to fitness or looking for a fast-paced, effective workout. Classes feature a variety of exercises designed to maximize calorie burn and improve overall fitness in a supportive group environment.',
+    fullDescription: 'Strive-X Hiit is high-intensity interval training that burns calories and improves cardiovascular fitness. Perfect for those new to fitness or looking for a fast-paced, effective workout. Classes feature a variety of exercises designed to maximize calorie burn and improve overall fitness in a supportive group environment.',
     image: '/imgs/hiit.jpg'
   },
   {
@@ -195,7 +195,7 @@ const Programs = () => (
 
       {/* 3 rows on desktop, 2 columns on tablet, 1 on mobile */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-        {/* Row 1: CrossFit, HYROX, STRIVE-X */}
+        {/* Row 1: CrossFit, HYROX, Strive-X Hiit */}
         {/* CrossFit - Featured */}
         <Link to={`/programs/${programs[0].slug}`} className="group relative overflow-hidden rounded-xl min-h-[280px] lg:min-h-[320px] block" style={{ backgroundColor: '#232a3a' }}>
           <img
@@ -225,7 +225,7 @@ const Programs = () => (
           </div>
         </Link>
 
-        {/* STRIVE-X */}
+        {/* Strive-X Hiit */}
         <Link to={`/programs/${programs[2].slug}`} className="group relative overflow-hidden rounded-xl min-h-[220px] lg:min-h-[320px] block" style={{ backgroundColor: '#2e3545' }}>
           <img
             src={programs[2].image}
@@ -234,7 +234,7 @@ const Programs = () => (
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0c1322] via-[#0c1322]/60 to-transparent" />
           <div className="absolute inset-0 flex flex-col justify-end p-6 sm:p-8">
-            <h3 className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl font-black text-white uppercase mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>STRIVE-X</h3>
+            <h3 className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl font-black text-white uppercase mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Strive-X Hiit</h3>
             <p className="text-sm sm:text-base" style={{ color: 'rgba(220, 226, 247, 0.8)' }}>{programs[2].shortDescription}</p>
           </div>
         </Link>
@@ -881,7 +881,7 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="py-16 md:py-24 px-6 md:px-8" style={{ backgroundColor: '#0c1322' }}>
+    <section className="py-12 md:py-16 px-6 md:px-8" style={{ backgroundColor: '#0c1322' }}>
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-white mb-4" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
@@ -911,19 +911,6 @@ const Testimonials = () => {
             </div>
           ))}
         </div>
-        {/* CTA */}
-        <div className="text-center mt-12">
-          <p className="text-lg mb-4" style={{ color: 'rgba(220, 226, 247, 0.7)' }}>
-            Ready to write your own success story?
-          </p>
-          <a
-            href="https://crossfitsouthie.sites.zenplanner.com/freeTrial.cfm"
-            className="inline-block px-8 py-4 text-lg font-bold uppercase tracking-wide transition-all hover:scale-105 text-white"
-            style={{ backgroundColor: '#dc2626', fontFamily: "'Space Grotesk', sans-serif" }}
-          >
-            Start Your Free Trial
-          </a>
-        </div>
       </div>
     </section>
   )
@@ -939,7 +926,7 @@ const PressSection = () => {
   ]
 
   return (
-    <section className="py-16 md:py-24 px-6 md:px-8" style={{ backgroundColor: '#141b2b' }}>
+    <section className="pt-8 pb-16 md:pt-12 md:pb-24 px-6 md:px-8" style={{ backgroundColor: '#141b2b' }}>
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-white mb-4" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
@@ -1072,40 +1059,30 @@ const BlogSection = () => {
 
 // Instagram Feed Section
 const InstagramFeed = () => {
+  useEffect(() => {
+    const container = document.getElementById('ft-insta-app')
+    if (container && !container.hasChildNodes()) {
+      const div = document.createElement('div')
+      div.setAttribute('data-key', 'Dark Instagram Feed')
+      div.setAttribute('class', 'ft')
+      div.setAttribute('id', 'ftood1t3xi')
+      container.appendChild(div)
+
+      const script = document.createElement('script')
+      script.src = 'https://wdg.fouita.com/widgets/0x46bd09.js'
+      script.async = true
+      document.head.appendChild(script)
+    }
+    return () => {
+      document.head.querySelector('script[src*="fouita.com/widgets/0x46bd09.js"]')?.remove()
+    }
+  }, [])
+
   return (
-    <section className="py-16 md:py-24 px-6 md:px-8" style={{ backgroundColor: '#141b2b' }}>
+    <section className="px-6 md:px-8" style={{ backgroundColor: '#141b2b' }}>
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-white mb-4" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
-            FOLLOW THE COMMUNITY
-          </h2>
-          <p className="text-lg mb-6" style={{ color: 'rgba(220, 226, 247, 0.7)' }}>
-            Join <span className="font-bold" style={{ color: '#dc2626' }}>@crossfitsouthie</span> on Instagram
-          </p>
-          <a
-            href="https://instagram.com/crossfitsouthie"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 text-base font-bold uppercase tracking-wide transition-all hover:scale-105 text-white"
-            style={{ backgroundColor: '#dc2626', fontFamily: "'Space Grotesk', sans-serif" }}
-          >
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-            </svg>
-            Follow Us
-          </a>
-        </div>
-
-        {/* Elfsight Instagram Feed Widget */}
-        <div className="elfsight-app-8414209a-d512-48b4-96be-a742a5e9f406" data-elfsight-app-lazy></div>
-
-        {/* Hashtag */}
-        <div className="text-center mt-8">
-          <p className="text-sm" style={{ color: 'rgba(220, 226, 247, 0.5)' }}>
-            Tag your workouts with <span className="font-bold" style={{ color: '#dc2626' }}>#CrossFitSouthie</span> to be featured!
-          </p>
-        </div>
+        {/* Fouita Instagram Feed Widget */}
+        <div id="ft-insta-app"></div>
       </div>
     </section>
   )
@@ -1137,7 +1114,7 @@ const Location = () => (
             <p className="text-lg">
               <strong className="text-white">Contact:</strong><br />
               <a href="tel:617-780-9769" className="hover:text-red-500 transition-colors" style={{ color: '#dc2626' }}>Phone: 617-780-9769</a><br />
-              <a href="mailto:info@crossfitsouthie.com" className="hover:text-red-500 transition-colors" style={{ color: '#dc2626' }}>Email: info@crossfitsouthie.com</a>
+              <a href="mailto:info@crossfitsouthie.com" className="hover:text-red-500 transition-colors" style={{ color: '#dc2626' }}>Email: info@crossfitsouthie.com</a> <span className="text-sm" style={{ color: '#dc2626' }}>(preferred)</span>
             </p>
             <p className="text-lg">
               <strong className="text-white">Hours:</strong><br />
@@ -1169,17 +1146,7 @@ const Location = () => (
 const Footer = () => (
   <footer style={{ backgroundColor: '#141b2b' }}>
     <div className="max-w-7xl mx-auto px-6 md:px-12 py-12 md:py-16">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12">
-        {/* Brand Section */}
-        <div className="sm:col-span-2 lg:col-span-1">
-          <h3 className="text-lg font-black text-white uppercase mb-3" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
-            CROSSFIT SOUTHIE
-          </h3>
-          <p className="text-sm leading-relaxed" style={{ color: 'rgba(220, 226, 247, 0.7)' }}>
-            Redefining human performance through gritty, practical, and community-driven strength training in South Boston.
-          </p>
-        </div>
-
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
         {/* Quick Links */}
         <div>
           <h4 className="font-bold uppercase text-xs tracking-[0.2em] mb-4 text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Quick Links</h4>
@@ -1205,7 +1172,7 @@ const Footer = () => (
           <h4 className="font-bold uppercase text-xs tracking-[0.2em] mb-4 text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Contact</h4>
           <ul className="space-y-3">
             <li><a href="tel:617-780-9769" className="text-sm hover:text-white transition-all" style={{ color: 'rgba(220, 226, 247, 0.6)' }}>617-780-9769</a></li>
-            <li><a href="mailto:info@crossfitsouthie.com" className="text-sm hover:text-white transition-all" style={{ color: 'rgba(220, 226, 247, 0.6)' }}>info@crossfitsouthie.com</a></li>
+            <li><a href="mailto:info@crossfitsouthie.com" className="text-sm hover:text-white transition-all" style={{ color: 'rgba(220, 226, 247, 0.6)' }}>info@crossfitsouthie.com</a> <span className="text-xs" style={{ color: '#dc2626' }}>(preferred)</span></li>
           </ul>
         </div>
 
@@ -1223,9 +1190,11 @@ const Footer = () => (
     {/* Footer Bottom */}
     <div className="border-t px-6 md:px-12 py-6" style={{ borderColor: 'rgba(255,255,255,0.05)' }}>
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
-        <p className="text-xs tracking-wider" style={{ color: 'rgba(220, 226, 247, 0.5)' }}>
-          © {new Date().getFullYear()} CrossFit Southie - All rights reserved. Part of Strive Fitness & Performance.
-        </p>
+        <div className="flex flex-col items-center sm:items-start gap-2">
+          <img src="/imgs/logo.png" alt="CrossFit Southie" className="h-6 w-auto" style={{ opacity: 0.85 }} />
+          <span className="text-xs tracking-wider" style={{ color: 'rgba(220, 226, 247, 0.5)' }}>Redefining human performance through gritty, practical, and community-driven strength training in South Boston.</span>
+          <span className="text-xs tracking-wider" style={{ color: 'rgba(220, 226, 247, 0.5)' }}>© {new Date().getFullYear()} - All rights reserved. Part of Strive Fitness & Performance.</span>
+        </div>
         <a
           href="https://crossfitsouthie.sites.zenplanner.com/sign-up-now.cfm"
           className="px-6 py-2 text-sm font-bold uppercase tracking-wide transition-all text-white"
@@ -1315,6 +1284,15 @@ const Navigation = () => {
                 >
                   Waiver
                 </a>
+                <a
+                  href="https://crossfitsouthie.sites.zenplanner.com/retail.cfm?Category=TShirt"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-4 py-2 text-white hover:bg-gray-800 text-sm font-bold uppercase"
+                  onClick={() => setInfoOpen(false)}
+                >
+                  Shop Apparel
+                </a>
               </div>
             )}
           </div>
@@ -1371,6 +1349,7 @@ const Navigation = () => {
                 <Link to="/pricing" className="block text-white hover:text-gray-300 transition-colors text-sm font-bold uppercase">Pricing</Link>
                 <Link to="/contact" className="block text-white hover:text-gray-300 transition-colors text-sm font-bold uppercase">Contact Us</Link>
                 <a href="https://www.waiverfile.com/b/CrossFitSouthie/Waiver.aspx?formid=7b41bbe4-6aca-414e-95ad-5d1ca863c31c" target="_blank" rel="noopener noreferrer" className="block text-white hover:text-gray-300 transition-colors text-sm font-bold uppercase">Waiver</a>
+                <a href="https://crossfitsouthie.sites.zenplanner.com/retail.cfm?Category=TShirt" target="_blank" rel="noopener noreferrer" className="block text-white hover:text-gray-300 transition-colors text-sm font-bold uppercase">Shop Apparel</a>
               </div>
             )}
             <a
@@ -1399,7 +1378,8 @@ const PricingPage = () => {
         'Unlimited HIIT, SSC & HYROX classes',
         'Open gym access',
         'Member app access',
-        'Nutrition guidance'
+        'Nutrition guidance',
+        '+ $10 for 24 Hour Access'
       ]
     },
     {
@@ -1470,7 +1450,8 @@ const PricingPage = () => {
       features: [
         '8-session Foundations Course',
         'Proper movement patterns',
-        'Build confidence'
+        'Build confidence',
+        'Runs monthly on Tues & Thurs at 7pm'
       ]
     },
     {
@@ -1506,7 +1487,7 @@ const PricingPage = () => {
             MEMBERSHIP OPTIONS
           </h2>
           <p className="text-center mb-12 max-w-2xl mx-auto" style={{ color: 'rgba(220, 226, 247, 0.6)' }}>
-            All memberships are monthly, do not require a long term commitment and can be cancelled at any time.
+            All memberships are monthly and can be cancelled at any time.
           </p>
 
           <h3 className="text-2xl font-bold mb-6 text-center tracking-tight text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
@@ -1615,6 +1596,16 @@ const PricingPage = () => {
           </Link>
         </div>
       </section>
+      {/* Floating Review All Options Button */}
+      <a
+        href="https://crossfitsouthie.sites.zenplanner.com/sign-up-now.cfm"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 px-8 py-4 font-bold tracking-wide text-white shadow-lg transition-all hover:scale-105"
+        style={{ backgroundColor: '#dc2626' }}
+      >
+        Review All Options
+      </a>
       <Footer />
     </div>
   )
@@ -2055,16 +2046,16 @@ const WhatToExpectPage = () => {
   return (
     <div className="font-sans pt-20">
       <Navigation />
-      <section className="py-16 px-6 md:px-8" style={{ backgroundColor: '#0c1322' }}>
+      <section className="py-8 px-6 md:px-8" style={{ backgroundColor: '#0c1322' }}>
         <div className="max-w-4xl mx-auto">
-          <Link to="/" className="inline-flex items-center mb-8 transition-colors" style={{ color: 'rgba(220, 226, 247, 0.6)' }}>
+          <Link to="/" className="inline-flex items-center mb-4 transition-colors" style={{ color: 'rgba(220, 226, 247, 0.6)' }}>
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
           </Link>
-          <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-6 text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+          <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-4 text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
             WHAT TO EXPECT
           </h1>
-          <p className="text-xl mb-12" style={{ color: 'rgba(220, 226, 247, 0.8)' }}>
+          <p className="text-lg" style={{ color: 'rgba(220, 226, 247, 0.8)' }}>
             Your guide to starting your fitness journey at CrossFit Southie
           </p>
         </div>
@@ -2081,10 +2072,6 @@ const WhatToExpectPage = () => {
                 Every new member starts with a complimentary intro session. This is your chance to meet our coaches, learn the fundamental movements, and experience our community firsthand.
               </p>
               <ul className="space-y-2" style={{ color: 'rgba(220, 226, 247, 0.7)' }}>
-                <li className="flex items-start">
-                  <span className="mr-2" style={{ color: '#dc2626' }}>•</span>
-                  One-on-one time with a certified coach
-                </li>
                 <li className="flex items-start">
                   <span className="mr-2" style={{ color: '#dc2626' }}>•</span>
                   Learn proper technique for basic movements
@@ -2109,10 +2096,7 @@ const WhatToExpectPage = () => {
           <div className="flex items-start gap-6">
             <div className="flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-black text-white" style={{ backgroundColor: '#dc2626', fontFamily: "'Space Grotesk', sans-serif" }}>2</div>
             <div>
-              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Fundamentals Course</h2>
-              <p className="text-lg mb-4" style={{ color: 'rgba(220, 226, 247, 0.8)' }}>
-                After your intro, you'll join our 8-session Fundamentals course. This is where you'll build a solid foundation before jumping into regular group classes.
-              </p>
+              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Fundamentals Course (optional)</h2>
               <ul className="space-y-2" style={{ color: 'rgba(220, 226, 247, 0.7)' }}>
                 <li className="flex items-start">
                   <span className="mr-2" style={{ color: '#dc2626' }}>•</span>
@@ -2121,6 +2105,10 @@ const WhatToExpectPage = () => {
                 <li className="flex items-start">
                   <span className="mr-2" style={{ color: '#dc2626' }}>•</span>
                   Master the fundamental movements: squat, deadlift, press, pull
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2" style={{ color: '#dc2626' }}>•</span>
+                  Introduction to all Olympic Weightlifting and gymnastics movements
                 </li>
                 <li className="flex items-start">
                   <span className="mr-2" style={{ color: '#dc2626' }}>•</span>
@@ -2144,7 +2132,7 @@ const WhatToExpectPage = () => {
             <div>
               <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Join the Community</h2>
               <p className="text-lg mb-4" style={{ color: 'rgba(220, 226, 247, 0.8)' }}>
-                Once you've completed Fundamentals, you're ready to join any class on the schedule. Choose from CrossFit, STRIVE-X HIIT, SSC, or HYROX training.
+                Choose from CrossFit, Strive-X Hiit, SSC, or HYROX training.
               </p>
               <ul className="space-y-2" style={{ color: 'rgba(220, 226, 247, 0.7)' }}>
                 <li className="flex items-start">
@@ -2222,7 +2210,7 @@ const WhatToExpectPage = () => {
           <h2 className="text-2xl md:text-3xl font-bold mb-6 text-white text-center" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Common Questions</h2>
           <div className="space-y-4">
             {[
-              { q: "How long is the Fundamentals course?", a: "Our Fundamentals course consists of 8 sessions, typically completed over 2-4 weeks depending on your schedule and comfort level." },
+              { q: "How long is the Fundamentals course?", a: "Our Fundamentals course runs monthly and consists of 8 sessions, complete on Tuesday and Thursdays at 7pm over the course of the month." },
               { q: "What if I can't do a pull-up or push-up?", a: "No problem! All movements are scalable. Our coaches will teach you modified versions that work for your current fitness level, and you'll progress from there." },
               { q: "Is CrossFit safe for beginners?", a: "Absolutely. With proper coaching and scaling, CrossFit is one of the safest and most effective fitness programs for all fitness levels." },
               { q: "What if I miss a Fundamentals session?", a: "Life happens! We offer makeup sessions and flexible scheduling. Just talk to your coach and we'll get you back on track." },
@@ -2480,9 +2468,9 @@ function App() {
             <ScheduleCTA />
             <ReviewStats />
             <Testimonials />
+            <InstagramFeed />
             <PressSection />
             <FAQ />
-            <InstagramFeed />
             <Location />
             <Footer />
           </>
