@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ChevronRight } from 'lucide-react'
 import { Footer } from '@/components/Footer'
-import { Navigation } from '@/components/Navigation'
 
 export const PricingPage = () => {
   const crossfitMemberships = [
@@ -116,12 +115,11 @@ export const PricingPage = () => {
 
   return (
     <div className="font-sans pt-20">
-      <Navigation />
       <section className="py-20 px-4" style={{ backgroundColor: '#0c1322' }}>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center tracking-tight text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-center tracking-tight text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
             MEMBERSHIP OPTIONS
-          </h2>
+          </h1>
           <p className="text-center mb-12 max-w-2xl mx-auto" style={{ color: 'rgba(220, 226, 247, 0.6)' }}>
             All memberships are monthly and can be cancelled at any time.
           </p>

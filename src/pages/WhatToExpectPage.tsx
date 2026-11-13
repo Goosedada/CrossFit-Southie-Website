@@ -2,7 +2,6 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowLeft } from 'lucide-react'
 import { Footer } from '@/components/Footer'
-import { Navigation } from '@/components/Navigation'
 
 export const WhatToExpectPage = () => {
   useEffect(() => {
@@ -13,7 +12,6 @@ export const WhatToExpectPage = () => {
 
   return (
     <div className="font-sans pt-20">
-      <Navigation />
       <section className="py-8 px-6 md:px-8" style={{ backgroundColor: '#0c1322' }}>
         <div className="max-w-4xl mx-auto">
           <Link to="/" className="inline-flex items-center mb-4 transition-colors" style={{ color: 'rgba(220, 226, 247, 0.6)' }}>

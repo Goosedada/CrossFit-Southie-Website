@@ -27,7 +27,7 @@ export const About = () => (
       </div>
       <div className="relative">
         <div className="aspect-square overflow-hidden rounded-xl" style={{ backgroundColor: '#232a3a' }}>
-          <img
+          <img loading="lazy" decoding="async"
             src="/imgs/community2.jpg"
             alt="Interior of CrossFit Southie gym floor"
             className="w-full h-full object-cover"

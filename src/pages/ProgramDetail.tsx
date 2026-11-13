@@ -3,11 +3,14 @@ import { Link, useParams } from 'react-router-dom'
 import { ArrowLeft } from 'lucide-react'
 import { programs } from '@/data/programs'
 import { Footer } from '@/components/Footer'
-import { Navigation } from '@/components/Navigation'
+import { usePageMeta } from '@/hooks/usePageMeta'
+import { notFoundMeta, programMeta } from '@/seo/meta'
 
 export const ProgramDetail = () => {
   const { slug } = useParams()
   const program = programs.find(p => p.slug === slug)
+
+  usePageMeta(program ? programMeta(program) : notFoundMeta(`/programs/${slug}`))
 
   useEffect(() => {
     setTimeout(() => {
@@ -18,7 +21,6 @@ export const ProgramDetail = () => {
   if (!program) {
     return (
       <div className="font-sans pt-20">
-        <Navigation />
         <div className="py-20 px-4 text-center">
           <h1 className="text-3xl font-bold text-white">Program Not Found</h1>
           <Link to="/" className="hover:underline mt-4 inline-block" style={{ color: '#dc2626' }}>Return Home</Link>
@@ -30,7 +32,6 @@ export const ProgramDetail = () => {
 
   return (
     <div className="font-sans pt-20">
-      <Navigation />
       <section className="py-20 px-4" style={{ backgroundColor: '#0c1322' }}>
         <div className="max-w-4xl mx-auto text-center">
           <Link to="/" className="inline-flex items-center mb-8 transition-colors" style={{ color: 'rgba(220, 226, 247, 0.6)' }}>

@@ -1,7 +1,6 @@
 import { useEffect } from 'react'
 import { Location } from '@/components/Location'
 import { Footer } from '@/components/Footer'
-import { Navigation } from '@/components/Navigation'
 
 export const ContactPage = () => {
   useEffect(() => {
@@ -12,7 +11,7 @@ export const ContactPage = () => {
 
   return (
     <div className="font-sans pt-20">
-      <Navigation />
+      <h1 className="sr-only">Contact CrossFit Southie in South Boston</h1>
       <Location />
       <Footer />
     </div>

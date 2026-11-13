@@ -3,7 +3,8 @@ import { Link, useParams } from 'react-router-dom'
 import { ChevronRight, ArrowLeft } from 'lucide-react'
 import { coaches } from '@/data/coaches'
 import { Footer } from '@/components/Footer'
-import { Navigation } from '@/components/Navigation'
+import { usePageMeta } from '@/hooks/usePageMeta'
+import { absoluteUrl, coachMeta, notFoundMeta, SITE_URL } from '@/seo/meta'
 
 export const CoachDetail = () => {
   const { slug } = useParams()
@@ -15,47 +16,12 @@ export const CoachDetail = () => {
     }, 0)
   }, [slug])
 
-  // Update document head with SEO meta tags for each coach
+  // Title, description, canonical and social tags
+  usePageMeta(coach ? coachMeta(coach) : notFoundMeta(`/coaches/${slug}`))
+
+  // Person + breadcrumb structured data for each coach
   useEffect(() => {
     if (coach) {
-      document.title = `${coach.name} - ${coach.role} | CrossFit Southie`
-
-      // Update or create meta description
-      let metaDesc = document.querySelector('meta[name="description"]') as HTMLMetaElement | null
-      if (!metaDesc) {
-        metaDesc = document.createElement('meta') as HTMLMetaElement
-        metaDesc.name = 'description'
-        document.head.appendChild(metaDesc)
-      }
-      metaDesc.setAttribute('content', `${coach.name} is ${coach.role} at CrossFit Southie in South Boston. ${coach.bio.substring(0, 150)}...`)
-
-      // Update or create OG title
-      let ogTitle = document.querySelector('meta[property="og:title"]') as HTMLMetaElement | null
-      if (!ogTitle) {
-        ogTitle = document.createElement('meta') as HTMLMetaElement
-        ogTitle.setAttribute('property', 'og:title')
-        document.head.appendChild(ogTitle)
-      }
-      ogTitle.setAttribute('content', `${coach.name} - ${coach.role} | CrossFit Southie`)
-
-      // Update or create OG description
-      let ogDesc = document.querySelector('meta[property="og:description"]') as HTMLMetaElement | null
-      if (!ogDesc) {
-        ogDesc = document.createElement('meta') as HTMLMetaElement
-        ogDesc.setAttribute('property', 'og:description')
-        document.head.appendChild(ogDesc)
-      }
-      ogDesc.setAttribute('content', `${coach.bio.substring(0, 200)}...`)
-
-      // Update or create canonical URL
-      let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null
-      if (!canonical) {
-        canonical = document.createElement('link') as HTMLLinkElement
-        canonical.rel = 'canonical'
-        document.head.appendChild(canonical)
-      }
-      canonical.href = `https://crossfitsouthie.com/coaches/${coach.slug}`
-
       // Update or create Person Schema
       let existingSchema = document.querySelector('script[data-coach-schema]')
       if (existingSchema) {
@@ -65,15 +31,15 @@ export const CoachDetail = () => {
       const personSchema: Record<string, unknown> = {
         "@context": "https://schema.org",
         "@type": "Person",
-        "@id": `https://crossfitsouthie.com/coaches/${coach.slug}#person`,
+        "@id": `${absoluteUrl(`/coaches/${coach.slug}`)}#person`,
         "name": coach.name,
         "jobTitle": coach.role,
         "description": coach.bio.substring(0, 300),
-        "url": `https://crossfitsouthie.com/coaches/${coach.slug}`,
+        "url": absoluteUrl(`/coaches/${coach.slug}`),
         "image": coach.image ? `https://crossfitsouthie.com${coach.image}` : undefined,
         "memberOf": {
           "@type": "Organization",
-          "@id": "https://crossfitsouthie.com/#organization",
+          "@id": `${SITE_URL}/#gym`,
           "name": "CrossFit Southie",
           "url": "https://crossfitsouthie.com",
           "address": {
@@ -86,7 +52,7 @@ export const CoachDetail = () => {
           }
         },
         "worksFor": {
-          "@id": "https://crossfitsouthie.com/#organization"
+          "@id": `${SITE_URL}/#gym`
         }
       }
 
@@ -109,19 +75,19 @@ export const CoachDetail = () => {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://crossfitsouthie.com"
+            "item": `${SITE_URL}/`
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Our Team",
-            "item": "https://crossfitsouthie.com/#team"
+            "item": absoluteUrl('/team')
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": coach.name,
-            "item": `https://crossfitsouthie.com/coaches/${coach.slug}`
+            "item": absoluteUrl(`/coaches/${coach.slug}`)
           }
         ]
       }
@@ -150,7 +116,6 @@ export const CoachDetail = () => {
   if (!coach) {
     return (
       <div className="font-sans pt-20">
-        <Navigation />
         <div className="py-20 px-4 text-center">
           <h1 className="text-3xl font-bold text-white">Coach Not Found</h1>
           <Link to="/" className="hover:underline mt-4 inline-block" style={{ color: '#dc2626' }}>Return Home</Link>
@@ -162,7 +127,6 @@ export const CoachDetail = () => {
 
   return (
     <div className="font-sans pt-20">
-      <Navigation />
       <section className="py-20 px-4" style={{ backgroundColor: '#0c1322' }}>
         <div className="max-w-4xl mx-auto text-center">
           <Link to="/" className="inline-flex items-center mb-8 transition-colors" style={{ color: 'rgba(220, 226, 247, 0.6)' }}>

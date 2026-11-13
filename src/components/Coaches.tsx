@@ -18,7 +18,7 @@ export const Coaches = () => {
             <Link key={coach.name} to={`/coaches/${coach.slug}`} className="group block text-left">
               <div className="w-full aspect-square mx-auto mb-3 sm:mb-4 overflow-hidden rounded-lg" style={{ backgroundColor: '#232a3a' }}>
                 {coach.image ? (
-                  <img src={coach.image} alt={coach.name} className="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500" />
+                  <img loading="lazy" decoding="async" src={coach.image} alt={coach.name} className="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500" />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center text-xl sm:text-2xl font-bold text-white">
                     {coach.name.split(' ').map(n => n[0]).join('')}

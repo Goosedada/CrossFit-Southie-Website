@@ -25,7 +25,7 @@ export const Programs = () => (
         {/* Row 1: CrossFit, HYROX, Strive-X Hiit */}
         {/* CrossFit - Featured */}
         <Link to={`/programs/${programs[0].slug}`} className="group relative overflow-hidden rounded-xl min-h-[280px] lg:min-h-[320px] block" style={{ backgroundColor: '#232a3a' }}>
-          <img
+          <img loading="lazy" decoding="async"
             src={programs[0].image}
             alt="CrossFit training"
             className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700"
@@ -40,7 +40,7 @@ export const Programs = () => (
 
         {/* HYROX */}
         <Link to={`/programs/${programs[1].slug}`} className="group relative overflow-hidden rounded-xl min-h-[220px] lg:min-h-[320px] block" style={{ backgroundColor: '#2e3545' }}>
-          <img
+          <img loading="lazy" decoding="async"
             src={programs[1].image}
             alt="HYROX competition prep"
             className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700"
@@ -54,7 +54,7 @@ export const Programs = () => (
 
         {/* Strive-X Hiit */}
         <Link to={`/programs/${programs[2].slug}`} className="group relative overflow-hidden rounded-xl min-h-[220px] lg:min-h-[320px] block" style={{ backgroundColor: '#2e3545' }}>
-          <img
+          <img loading="lazy" decoding="async"
             src={programs[2].image}
             alt="Strive X intensity"
             className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700"
@@ -69,7 +69,7 @@ export const Programs = () => (
         {/* Row 2: FUNDAMENTALS, STRENGTH & CONDITIONING, PRIVATE COACHING */}
         {/* FUNDAMENTALS */}
         <Link to={`/programs/${programs[4].slug}`} className="group relative overflow-hidden rounded-xl min-h-[220px] lg:min-h-[320px] block" style={{ backgroundColor: '#232a3a' }}>
-          <img
+          <img loading="lazy" decoding="async"
             src={programs[4].image}
             alt="Fundamentals program"
             className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700"
@@ -83,7 +83,7 @@ export const Programs = () => (
 
         {/* STRENGTH & CONDITIONING */}
         <Link to={`/programs/${programs[3].slug}`} className="group relative overflow-hidden rounded-xl min-h-[220px] lg:min-h-[320px] block" style={{ backgroundColor: '#232a3a' }}>
-          <img
+          <img loading="lazy" decoding="async"
             src={programs[3].image}
             alt="Strength & Conditioning"
             className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700"
@@ -97,7 +97,7 @@ export const Programs = () => (
 
         {/* PRIVATE COACHING */}
         <Link to={`/programs/${programs[5].slug}`} className="group relative overflow-hidden rounded-xl min-h-[220px] lg:min-h-[320px] block" style={{ backgroundColor: '#232a3a' }}>
-          <img
+          <img loading="lazy" decoding="async"
             src={programs[5].image}
             alt="1-on-1 coaching session"
             className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700"
