@@ -1,18 +1,12 @@
 import path from "path"
 import react from "@vitejs/plugin-react"
 import { defineConfig } from "vite"
-import sourceIdentifierPlugin from 'vite-plugin-source-identifier'
 
-const isProd = process.env.BUILD_MODE === 'prod'
 export default defineConfig({
-  plugins: [
-    react(),
-    sourceIdentifierPlugin({
-      enabled: !isProd,
-      attributePrefix: 'data-matrix',
-      includeProps: true,
-    })
-  ],
+  // Served from the domain root (crossfitsouthie.com). If you ever deploy to
+  // https://<user>.github.io/<repo>/ instead, set base to '/<repo>/'.
+  base: '/',
+  plugins: [react()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
