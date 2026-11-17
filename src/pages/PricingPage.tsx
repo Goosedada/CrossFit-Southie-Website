@@ -83,7 +83,7 @@ export const PricingPage = () => {
       price: '$99',
       period: '/month',
       features: [
-        '8-session Foundations Course',
+        '8-session Fundamentals Course',
         'Proper movement patterns',
         'Build confidence',
         'Runs monthly on Tues & Thurs at 7pm'

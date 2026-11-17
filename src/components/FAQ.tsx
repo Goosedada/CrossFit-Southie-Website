@@ -7,27 +7,27 @@ export const FAQ = () => {
   const faqs = [
     {
       question: "What is CrossFit and is it right for me?",
-      answer: "CrossFit is a high-intensity fitness program designed to improve your strength, endurance, and overall health. Whether you're a beginner or an experienced athlete, our workouts are scalable to meet you where you are. Our certified coaches will guide you through proper technique and help you progress at your own pace."
+      answer: "CrossFit is a high-intensity fitness program designed to improve your strength, endurance, and overall health. Whether you're a beginner or an experienced athlete, our workouts are scalable to meet you where you are. Our experienced coaches will guide you through proper technique and help you progress at your own pace."
     },
     {
       question: "Do I need to be fit before starting?",
-      answer: "Not at all! One of the best things about CrossFit is that anyone can do it. Our Foundations program is specifically designed for beginners, teaching you the fundamental movements before you join regular classes. Many of our most dedicated members started with zero fitness background."
+      answer: "Not at all. Anyone can do CrossFit. Our Fundamentals program is designed for beginners and teaches the basic movements before you join regular classes."
     },
     {
       question: "What should I expect in my first class?",
-      answer: "Your first class will be a complimentary intro session where you'll meet our coaches, learn basic movements, and get a feel for our community. We recommend arriving 15 minutes early to fill out paperwork. Wear comfortable workout clothes and bring water. Don't worry about being perfect - we'll guide you through everything!"
+      answer: "Your first class is a complimentary intro session where you'll meet our coaches, learn the basic movements, and get a feel for our community. Arrive 5 to 10 minutes early, wear workout gear, and bring a water bottle. Class workouts include a Base option for every movement. Don't worry about being perfect. We'll guide you through everything."
     },
     {
       question: "What are your membership options?",
-      answer: "We offer flexible membership plans starting at $149/month for 2 classes per week, up to unlimited access for $249/month. All memberships include access to our HIIT, Strength & Conditioning, and HYROX classes. For those not ready to commit to a monthly membership, we offer class packs and drop-in rates."
+      answer: "We have memberships for CrossFit, Strive (HIIT, Strength & Conditioning, and Hyrox), and CrossFit Fundamentals. Plans are monthly and cancel anytime. CrossFit memberships range from $149/month for 2 classes per week to $249/month for unlimited. Strive & Hyrox memberships range from $125/month for 2 classes per week to $175/month for unlimited. CrossFit Fundamentals is $99/month. Drop-in classes are $30 each. See the full pricing page for details."
     },
     {
       question: "Do you offer personal training?",
-      answer: "Yes! Our certified personal trainers offer one-on-one coaching tailored to your specific goals. Whether you want to compete, lose weight, build strength, or improve athletic performance, we'll create a custom program just for you. Contact us for pricing and availability."
+      answer: "Yes. Our experienced personal trainers offer one-on-one coaching tailored to your goals, whether you want to compete, lose weight, build strength, or improve athletic performance. Sessions are $99 each and include custom programming, nutrition guidance, and individual attention. To get set up, email info@crossfitsouthie.com."
     },
     {
       question: "What are your gym hours?",
-      answer: "We're open Monday-Thursday 5am-8pm, Friday 5am-7pm, Saturday 7am-1pm, and Sunday 9am-12pm. Unlimited members have open gym access during staffed hours, and can add on 24-hour access for maximum flexibility. Class schedules vary throughout the day - check our calendar for specific times."
+      answer: "Our staffed hours are Monday to Thursday 5am to 8pm, Friday 5am to 7pm, Saturday 7am to 1pm, and Sunday 9am to 12pm. Unlimited CrossFit members have open gym access during staffed hours. You can add 24-hour access for $10/month, which lets you use the gym during non-staffed hours. Check the schedule for class times, which vary throughout the day."
     }
   ]
 

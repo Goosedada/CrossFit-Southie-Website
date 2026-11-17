@@ -28,31 +28,6 @@ export const ReviewStats = () => (
         {/* Divider */}
         <div className="hidden md:block w-px h-12" style={{ backgroundColor: 'rgba(220, 226, 247, 0.2)' }}></div>
 
-        {/* Reviews Count */}
-        <div className="text-left">
-          <div className="flex items-center gap-2">
-            <svg className="w-6 h-6 text-red-500" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
-            </svg>
-            <span className="text-3xl font-black text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>500+</span>
-          </div>
-          <p className="text-sm" style={{ color: 'rgba(220, 226, 247, 0.6)' }}>5-Star Reviews</p>
-        </div>
-
-        {/* Divider */}
-        <div className="hidden md:block w-px h-12" style={{ backgroundColor: 'rgba(220, 226, 247, 0.2)' }}></div>
-
-        {/* Members */}
-        <div className="text-left">
-          <div className="flex items-center gap-2">
-            <svg className="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-            </svg>
-            <span className="text-3xl font-black text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>400+</span>
-          </div>
-          <p className="text-sm" style={{ color: 'rgba(220, 226, 247, 0.6)' }}>Active Members</p>
-        </div>
-
         {/* CTA Button */}
         <a
           href="https://www.google.com/maps/place/CrossFit+Southie/@42.3354755,-71.0684606,17z/data=!4m8!3m7!1s0x89e37a670d8f7ec5:0xd432a03a504831de!8m2!3d42.3354755!4d-71.0658857!9m1!1b1!16s%2Fg%2F11c2w4y5x4?entry=ttu&g_ep=EgoyMDI1MDUxMi4wIKXMDSoASAFQAw%3D%3D"

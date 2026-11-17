@@ -49,7 +49,7 @@ export const STATIC_PAGES: Record<string, PageMeta> = {
     path: '/contact',
     title: 'Contact & Location | CrossFit Southie',
     description:
-      'Visit CrossFit Southie at 383 Dorchester Ave, South Boston, MA 02127. Class hours, parking, phone and email.',
+      'Visit CrossFit Southie at 383 Dorchester Ave, South Boston, MA 02127. Class hours, parking and email.',
   },
   '/what-to-expect': {
     path: '/what-to-expect',

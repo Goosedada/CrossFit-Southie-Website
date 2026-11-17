@@ -22,7 +22,6 @@ export const Location = () => (
             </p>
             <p className="text-lg">
               <strong className="text-white">Contact:</strong><br />
-              <a href="tel:617-780-9769" className="hover:text-red-500 transition-colors" style={{ color: '#dc2626' }}>Phone: 617-780-9769</a><br />
               <a href="mailto:info@crossfitsouthie.com" className="hover:text-red-500 transition-colors" style={{ color: '#dc2626' }}>Email: info@crossfitsouthie.com</a> <span className="text-sm" style={{ color: '#dc2626' }}>(preferred)</span>
             </p>
             <p className="text-lg">
