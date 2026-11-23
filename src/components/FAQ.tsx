@@ -6,12 +6,12 @@ export const FAQ = () => {
 
   const faqs = [
     {
-      question: "What is CrossFit and is it right for me?",
+      question: "What is CrossFit, and is it right for me?",
       answer: "CrossFit is a high-intensity fitness program designed to improve your strength, endurance, and overall health. Whether you're a beginner or an experienced athlete, our workouts are scalable to meet you where you are. Our experienced coaches will guide you through proper technique and help you progress at your own pace."
     },
     {
       question: "Do I need to be fit before starting?",
-      answer: "Not at all. Anyone can do CrossFit. Our Fundamentals program is designed for beginners and teaches the basic movements before you join regular classes."
+      answer: "Not at all. All levels are welcome. Anyone can do CrossFit, and our Fundamentals program is designed for beginners. It teaches the basic movements before you join regular classes."
     },
     {
       question: "What should I expect in my first class?",
@@ -27,7 +27,7 @@ export const FAQ = () => {
     },
     {
       question: "What are your gym hours?",
-      answer: "Our staffed hours are Monday to Thursday 5am to 8pm, Friday 5am to 7pm, Saturday 7am to 1pm, and Sunday 9am to 12pm. Unlimited CrossFit members have open gym access during staffed hours. You can add 24-hour access for $10/month, which lets you use the gym during non-staffed hours. Check the schedule for class times, which vary throughout the day."
+      answer: "Our staffed hours are Monday to Thursday 5am to 8pm, Friday 5am to 7pm, Saturday 7am to 1pm, and Sunday 9am to 12pm. Unlimited CrossFit members have open gym access during staffed hours. You can add 24-hour access for a $10/month add-on, which lets you use the gym during non-staffed hours. Check the schedule for class times, which vary throughout the day."
     }
   ]
 
