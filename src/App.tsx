@@ -12,6 +12,8 @@ import { WhatToExpectPage } from '@/pages/WhatToExpectPage'
 import { ContactPage } from '@/pages/ContactPage'
 import { FitnessComponentsPage } from '@/pages/FitnessComponentsPage'
 import { NotFoundPage } from '@/pages/NotFoundPage'
+import { ArchivePostPage } from '@/pages/ArchivePostPage'
+import { archivePosts } from '@/data/archivePosts'
 
 function App() {
   return (
@@ -29,6 +31,9 @@ function App() {
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/10-components-physical-fitness" element={<FitnessComponentsPage />} />
+        {archivePosts.map((post) => (
+          <Route key={post.slug} path={`/${post.slug}`} element={<ArchivePostPage post={post} />} />
+        ))}
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <FloatingCTA />

@@ -57,6 +57,30 @@ export const STATIC_PAGES: Record<string, PageMeta> = {
     description:
       'Endurance, stamina, strength, flexibility, power, speed, coordination, agility, balance and accuracy: the 10 components of fitness, explained.',
   },
+  '/southie-showdown': {
+    path: '/southie-showdown',
+    title: 'Southie Showdown Competition | CrossFit Southie',
+    description:
+      'The Southie Showdown, CrossFit Southie’s two-day competition: the 2023 event, its divisions and movement standards.',
+  },
+  '/hero-wod-dork-4': {
+    path: '/hero-wod-dork-4',
+    title: 'Hero WOD “Dork” Workout and Scaling | CrossFit Southie',
+    description:
+      'Hero WOD “Dork”: 6 rounds of double-unders, kettlebell swings and burpees, with scaling options, honoring Boston firefighter Michael Kennedy.',
+  },
+  '/build-that-foundation-crossover-symmetry': {
+    path: '/build-that-foundation-crossover-symmetry',
+    title: 'Crossover Symmetry for Strong Shoulders | CrossFit Southie',
+    description:
+      'How to use Crossover Symmetry bands for shoulder activation, recovery and strength, from the CrossFit Southie archive.',
+  },
+  '/travel-wods-weekly-strength': {
+    path: '/travel-wods-weekly-strength',
+    title: 'Travel WODs and Weekly Strength | CrossFit Southie',
+    description:
+      'An archived CrossFit Southie workout post: overhead squats, an interval workout, a weekly strength schedule and an at-home workout.',
+  },
   '/what-to-expect': {
     path: '/what-to-expect',
     title: 'What to Expect at Your First Class | CrossFit Southie',
