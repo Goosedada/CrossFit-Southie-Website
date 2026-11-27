@@ -16,11 +16,11 @@ export const programs = [
     image: '/imgs/hyrox.jpg'
   },
   {
-    name: 'Strive-X Hiit',
-    slug: 'strive-x-hiit',
+    name: 'HIIT',
+    slug: 'hiit',
     parent: 'strive',
     shortDescription: 'Our signature conditioning-focused program. Low skill, maximum effort, total sweat.',
-    fullDescription: 'Strive-X Hiit is high-intensity interval training that burns calories and improves cardiovascular fitness. Perfect for those new to fitness or looking for a fast-paced, effective workout. Classes feature a variety of exercises designed to maximize calorie burn and improve overall fitness in a supportive group environment.',
+    fullDescription: 'HIIT is high-intensity interval training that burns calories and improves cardiovascular fitness. Perfect for those new to fitness or looking for a fast-paced, effective workout. Classes feature a variety of exercises designed to maximize calorie burn and improve overall fitness in a supportive group environment.',
     image: '/imgs/hiit.jpg'
   },
   {
@@ -47,10 +47,10 @@ export const programs = [
   },
   // Keep new entries at the end: the home page cards refer to programs by position.
   {
-    name: 'Strive',
+    name: 'STRIVE',
     slug: 'strive',
     shortDescription: 'HIIT, Strength & Conditioning and HYROX classes in one program.',
-    fullDescription: 'Strive is our program for people who want coached group training that builds conditioning, strength and endurance. One program gives you access to three types of classes: HIIT, Strength & Conditioning and HYROX.\n\nThree Ways To Train\nStrive-X Hiit is our signature conditioning class: low skill, maximum effort. Strength & Conditioning builds lean muscle and athletic performance through progressive strength training. HYROX combines running with functional exercises to prepare you for fitness racing or simply improve your overall conditioning.\n\nMembership\nStrive memberships include HIIT, Strength & Conditioning and HYROX classes, with 2x per week, 3x per week and unlimited options. They are monthly and can be cancelled at any time. CrossFit memberships also include access to these classes.',
+    fullDescription: 'STRIVE is our program for people who want coached group training that builds conditioning, strength and endurance. One program gives you access to three types of classes: HIIT, Strength & Conditioning and HYROX.\n\nThree Ways To Train\nHIIT is our signature conditioning class: low skill, maximum effort. Strength & Conditioning builds lean muscle and athletic performance through progressive strength training. HYROX combines running with functional exercises to prepare you for fitness racing or simply improve your overall conditioning.\n\nMembership\nSTRIVE memberships include HIIT, Strength & Conditioning and HYROX classes, with 2x per week, 3x per week and unlimited options. They are monthly and can be cancelled at any time. CrossFit memberships also include access to these classes.',
     image: '/imgs/hiit.jpg'
   }
 ]

@@ -7,7 +7,7 @@ export const About = () => (
           NOT JUST A GYM.<br/>A <span style={{ color: '#dc2626' }}>BATTLEGROUND</span> FOR BETTER.
         </h2>
         <div className="space-y-6 text-base md:text-lg leading-relaxed" style={{ color: 'rgba(220, 226, 247, 0.7)' }}>
-          <p>At CrossFit Southie and Strive Fitness, we've stripped away the fluff. Our 10,000 sq. ft. facility is designed for one thing: result-driven performance. Whether you're a competitive athlete or just starting your journey, our community provides the friction required for growth.</p>
+          <p>At CrossFit Southie and STRIVE Fitness, we've stripped away the fluff. Our 10,000 sq. ft. facility is designed for one thing: result-driven performance. Whether you're a competitive athlete or just starting your journey, our community provides the friction required for growth.</p>
           <p>Founded on the principles of functional movement and intense camaraderie, we've built a culture where every PR is celebrated and every goal is chased with relentless intensity.</p>
         </div>
         <div className="mt-10 md:mt-12 grid grid-cols-3 gap-4 md:gap-8">

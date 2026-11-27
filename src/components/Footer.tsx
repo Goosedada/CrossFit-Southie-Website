@@ -18,9 +18,9 @@ export const Footer = () => (
         <div>
           <h4 className="font-bold uppercase text-xs tracking-[0.2em] mb-4 text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Our Family</h4>
           <ul className="space-y-3">
-            <li><a href="https://strivefitnessandperformance.com/strive-duxbury" className="text-sm hover:text-white transition-all" style={{ color: 'rgba(220, 226, 247, 0.6)' }}>Strive Duxbury</a></li>
-            <li><a href="https://strivefitnessandperformance.com/strive-norwell" className="text-sm hover:text-white transition-all" style={{ color: 'rgba(220, 226, 247, 0.6)' }}>Strive Norwell</a></li>
-            <li><a href="https://strivefitnessandperformance.com/studio" className="text-sm hover:text-white transition-all" style={{ color: 'rgba(220, 226, 247, 0.6)' }}>Strive Studio</a></li>
+            <li><a href="https://strivefitnessandperformance.com/strive-duxbury" className="text-sm hover:text-white transition-all" style={{ color: 'rgba(220, 226, 247, 0.6)' }}>STRIVE Duxbury</a></li>
+            <li><a href="https://strivefitnessandperformance.com/strive-norwell" className="text-sm hover:text-white transition-all" style={{ color: 'rgba(220, 226, 247, 0.6)' }}>STRIVE Norwell</a></li>
+            <li><a href="https://strivefitnessandperformance.com/studio" className="text-sm hover:text-white transition-all" style={{ color: 'rgba(220, 226, 247, 0.6)' }}>STRIVE Studio</a></li>
           </ul>
         </div>
 
@@ -49,7 +49,7 @@ export const Footer = () => (
         <div className="flex flex-col items-center sm:items-start gap-2">
           <img src="/imgs/logo.png" alt="CrossFit Southie" className="h-6 w-auto" style={{ opacity: 0.85 }} />
           <span className="text-xs tracking-wider" style={{ color: 'rgba(220, 226, 247, 0.5)' }}>Redefining human performance through gritty, practical, and community-driven strength training in South Boston.</span>
-          <span className="text-xs tracking-wider" style={{ color: 'rgba(220, 226, 247, 0.5)' }}>© {new Date().getFullYear()} - All rights reserved. Part of Strive Fitness & Performance.</span>
+          <span className="text-xs tracking-wider" style={{ color: 'rgba(220, 226, 247, 0.5)' }}>© {new Date().getFullYear()} - All rights reserved. Part of STRIVE Fitness & Performance.</span>
         </div>
         <a
           href="https://crossfitsouthie.sites.zenplanner.com/sign-up-now.cfm"

@@ -8,7 +8,8 @@ import { notFoundMeta, programMeta } from '@/seo/meta'
 
 export const ProgramDetail = () => {
   const { parent, slug } = useParams()
-  const match = programs.find(p => p.slug === slug)
+  // 'strive-x-hiit' is the HIIT page's former address
+  const match = programs.find(p => p.slug === (slug === 'strive-x-hiit' ? 'hiit' : slug))
   // A nested URL is only valid under the program's real parent
   const program = match && (!parent || parent === match.parent) ? match : undefined
   const parentProgram = program?.parent ? programs.find(p => p.slug === program.parent) : undefined
@@ -35,7 +36,7 @@ export const ProgramDetail = () => {
   }
 
   // Send old links such as /programs/hyrox to their new home
-  if (program.parent && !parent) {
+  if ((program.parent && !parent) || slug !== program.slug) {
     return <Navigate to={programPath(program)} replace />
   }
 

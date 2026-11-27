@@ -22,7 +22,7 @@ export const Programs = () => (
 
       {/* 3 rows on desktop, 2 columns on tablet, 1 on mobile */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-        {/* Row 1: CrossFit, HYROX, Strive-X Hiit */}
+        {/* Row 1: CrossFit, HYROX, HIIT */}
         {/* CrossFit - Featured */}
         <Link to={programPath(programs[0])} className="group relative overflow-hidden rounded-xl min-h-[280px] lg:min-h-[320px] block" style={{ backgroundColor: '#232a3a' }}>
           <img loading="lazy" decoding="async"
@@ -52,16 +52,16 @@ export const Programs = () => (
           </div>
         </Link>
 
-        {/* Strive-X Hiit */}
+        {/* HIIT */}
         <Link to={programPath(programs[2])} className="group relative overflow-hidden rounded-xl min-h-[220px] lg:min-h-[320px] block" style={{ backgroundColor: '#2e3545' }}>
           <img loading="lazy" decoding="async"
             src={programs[2].image}
-            alt="Strive X intensity"
+            alt="HIIT class"
             className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0c1322] via-[#0c1322]/60 to-transparent" />
           <div className="absolute inset-0 flex flex-col justify-end p-6 sm:p-8">
-            <h3 className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl font-black text-white uppercase mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Strive-X Hiit</h3>
+            <h3 className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl font-black text-white uppercase mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>HIIT</h3>
             <p className="text-sm sm:text-base" style={{ color: 'rgba(220, 226, 247, 0.8)' }}>{programs[2].shortDescription}</p>
           </div>
         </Link>
