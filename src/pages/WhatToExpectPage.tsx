@@ -176,7 +176,7 @@ export const WhatToExpectPage = () => {
           <h2 className="text-2xl md:text-3xl font-bold mb-6 text-white text-center" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Common Questions</h2>
           <div className="space-y-4">
             {[
-              { q: "How long is the Fundamentals course?", a: "Our Fundamentals course runs monthly and consists of 8 sessions, complete on Tuesday and Thursdays at 7pm over the course of the month." },
+              { q: "How long is the Fundamentals course?", a: "Our Fundamentals course runs monthly and consists of 8 sessions, completed on Mondays and Thursdays at 7pm over the course of the month." },
               { q: "What if I can't do a pull-up or push-up?", a: "No problem! All movements are scalable. Our coaches will teach you modified versions that work for your current fitness level, and you'll progress from there." },
               { q: "Is CrossFit safe for beginners?", a: "Absolutely. With proper coaching and scaling, CrossFit is one of the safest and most effective fitness programs for all fitness levels." },
               { q: "What if I miss a Fundamentals session?", a: "Life happens! We offer makeup sessions and flexible scheduling. Just talk to your coach and we'll get you back on track." },

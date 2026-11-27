@@ -1,0 +1,10 @@
+{
+  // Cloudflare Workers settings. The site is static files only, built into ./dist.
+  "name": "cfswebsite",
+  "compatibility_date": "2026-11-27",
+  "assets": {
+    "directory": "./dist",
+    // Unknown addresses show dist/404.html with a "page not found" status.
+    "not_found_handling": "404-page"
+  }
+}
