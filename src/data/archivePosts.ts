@@ -1,6 +1,14 @@
 // Posts restored from the previous website. They keep their old addresses because people still find them on Google.
-export type ArchiveSection = { heading?: string; paragraphs?: string[]; list?: string[] }
-export type ArchivePost = { slug: string; title: string; date: string; note: string; sections: ArchiveSection[] }
+export type ArchiveImage = { src: string; alt: string; width: number; height: number }
+export type ArchiveSection = { heading?: string; paragraphs?: string[]; list?: string[]; numbered?: boolean; image?: ArchiveImage }
+export type ArchivePost = {
+  slug: string
+  title: string
+  date: string
+  note: string
+  sections: ArchiveSection[]
+  download?: { href: string; label: string }
+}
 
 export const archivePosts: ArchivePost[] = [
   {
@@ -42,10 +50,14 @@ export const archivePosts: ArchivePost[] = [
     date: 'March 31, 2014, by Goose',
     note: 'An article from our archive.',
     sections: [
+      {
+        image: { src: '/imgs/archive/crossover-symmetry-pulls.jpg', alt: 'Athlete pulling Crossover Symmetry bands overhead at CrossFit Southie', width: 640, height: 628 },
+      },
       { paragraphs: ['Anything worth building needs a strong foundation, and the same is true of fitness. Nutrition sits at the base. For the shoulders, trying to build strength on a tight chest, lats and upper back, or on weak shoulder blade stabilizers, limits how strong you can get and invites injury.'] },
-      { heading: 'Crossover Symmetry', paragraphs: ['Build a healthy, powerful shoulder by first restoring range of motion with soft tissue work (PVC pipe or softball rolling) and stretching, then strengthening the deep stabilizers of the shoulder. Crossover Symmetry bands and their programs are made for that second step.'] },
+      { heading: 'Crossover Symmetry', image: { src: '/imgs/archive/bands-and-crossover-symmetry.jpg', alt: 'Crossover Symmetry bands and charts on the wall at CrossFit Southie', width: 358, height: 536 }, paragraphs: ['Build a healthy, powerful shoulder by first restoring range of motion with soft tissue work (PVC pipe or softball rolling) and stretching, then strengthening the deep stabilizers of the shoulder. Crossover Symmetry bands and their programs are made for that second step.'] },
       {
         heading: 'How to use the bands',
+        image: { src: '/imgs/archive/crossover-symmetry-charts.jpg', alt: 'Crossover Symmetry and Iron Scap exercise charts', width: 586, height: 391 },
         list: [
           'Do each exercise on the chart once through, in order. As you progress, you can go through the program twice.',
           'Check the cord height for each exercise (eye level or knee level). Every Scap Jack exercise is done at eye level.',
@@ -67,15 +79,89 @@ export const archivePosts: ArchivePost[] = [
     ],
   },
   {
-    slug: 'travel-wods-weekly-strength',
-    title: 'Travel WODs and Weekly Strength',
-    date: 'August 16, 2015, by Retta',
-    note: 'A workout post from our archive.',
+    slug: 'travel-wods',
+    title: 'Travel WODs',
+    date: 'Workouts for the road',
+    note: 'Our original list of travel workouts, which need little or no equipment. Pick one and scale it to your level.',
+    download: { href: '/downloads/travel-wods.pdf', label: 'DOWNLOAD THE LIST (PDF)' },
     sections: [
-      { heading: 'Strength', paragraphs: ['Overhead squat: 5-4-3-2-1'] },
-      { heading: 'Workout', paragraphs: ['30 seconds of work and 30 seconds of rest for 4 rounds, then rotate.'], list: ['Airdyne bike', 'Wall balls (20 / 14 lb)', 'Row', 'Ring dips'] },
-      { heading: 'Weekly strength schedule', list: ['Monday: box squat with chains', 'Tuesday: squat snatch', 'Thursday: benchmark “Tabata This”', 'Friday: push press and push jerk'] },
-      { heading: 'At-home workout', paragraphs: ['50-40-30-20-10 reps of:'], list: ['Air squats', 'Sit-ups'] },
+      {
+        numbered: true,
+        list: [
+          'Run 1/2 mile, 50 air squats. 3 rounds.',
+          '10 push-ups, 10 sit-ups, 10 squats. 10 rounds.',
+          '200 air squats for time.',
+          'Run 200m, 20 squats, 10 push-ups. 5 rounds.',
+          'Sprint 200m and do 25 push-ups. 3 rounds.',
+          '10 handstand push-ups and a 200m run. 3 rounds.',
+          'Tabata squats and Tabata push-ups.',
+          '5 push-ups, 5 squats, 5 sit-ups. 20 rounds.',
+          'Walk 100 meters on your hands, even if it is 2 meters at a time.',
+          '50-40-30-20-10 sets of sit-ups with a 400 meter sprint between each set.',
+          'Invisible Fran: 21-15-9 of air squats and push-ups for time.',
+          'Spend a total of 5 minutes in a handstand or headstand. In a headstand, do not stay over a minute at a time.',
+          'Run 1 mile for time.',
+          '10 push-ups, 10 air squats, 10 sit-ups. 6 rounds for time.',
+          '3 vertical jumps, 3 squats, 3 long jumps. 5 rounds.',
+          '30 second handstand and 10 squats. 8 rounds.',
+          '10 push-ups, 100m dash. 10 times.',
+          'Tabata squats.',
+          '5 x 400m sprints, rest 2 minutes between each.',
+          '10 x 100m dash, rest 30 seconds between each.',
+          'Run 1 mile, lunging 30 steps every minute.',
+          '30 second handstand and 20 air squats. 5 rounds.',
+          '4 x 25 jumping squats, rest 1 minute between sets.',
+          '10 air squats every minute of a 1 mile run.',
+          '100 burpees for time.',
+          'Run 1 mile for time.',
+          '10 push-ups, 10 squats, 10 sit-ups. 10 rounds.',
+          '10 squat jumps, run 400 meters. 5 rounds.',
+          'Spend a total of 3 minutes in a handstand.',
+          '150 air squats for time.',
+          '1 minute handstand, 1 minute hold at the bottom of the squat. 5 rounds.',
+          'Sprint 100 meters, walk 100 meters. 10 rounds.',
+          '100 push-ups for time.',
+          '10-9-8-7-6-5-4-3-2-1 burpees and lunge jumps (each leg).',
+          '50 squats, 400 meter run. 3 rounds.',
+          '10 walking lunges (each leg), 10 push-ups. 10 rounds.',
+          '100 lunge jumps for time.',
+          '30 second handstand or 5 handstand push-ups, then a 400 meter run. 4 rounds.',
+          '10 burpees, 100 meter sprint. 10 times for time.',
+          'L-sit off the floor: 10 rounds of 10 seconds. If you can’t, sit with your legs straight out and try to lift your heels off the ground for 10 seconds instead.',
+          'Run 400 meters, 50 air squats. 4 rounds.',
+          '30 second handstand, 30 second squat hold. 10 rounds.',
+          '10 squat jumps, 10 push-ups. 5 rounds.',
+          '10 push-ups, 10 squats. 10 rounds.',
+          'Tabata squats: 20 seconds on, 10 seconds rest, 8 rounds. Count your lowest score.',
+          'Run 1 mile with 100 air squats at the midpoint, for time.',
+          '7 squats, 7 burpees. 7 rounds for time.',
+          'Tabata squats, then immediately run 1 mile for time.',
+          'Plank, bottom of squat and hollow rock hold, 30 seconds each for 10 rounds. Use the transitions as your rest and keep them as brief as possible.',
+          '5 push-ups with a 30 second plank at the top of the push-up (arms extended, body tight) after each 5 reps, 10 rounds. Then 3 x 100m dash at 80%.',
+          'Handstand practice: 25 tries at free handstands, then a 1 mile run at 80%.',
+          '5 x 50 air squats. Rest as long as each set of 50 took.',
+          'Run 1 mile and do 10 push-ups every minute.',
+          'Sprint 100m, 30 squats. 8 rounds.',
+          '20 sit-ups and 10 burpees. 10 rounds for time.',
+          '250 jumping jacks for time.',
+          '100 jumping jacks, 75 air squats, 50 push-ups, 25 burpees, for time.',
+          'Tabata push-ups.',
+          'Run 1 minute, squat 1 minute. 5 rounds.',
+          '30 air squats, 30 push-ups, 30 sit-ups. 3 rounds for time.',
+          '10 push-ups, 10 hollow rocks, run 200 meters. 5 rounds.',
+          'Tabata squats, bottom to bottom: rest at the bottom of the squat instead of standing, without support from your hands or seat, with a straight back and hips back.',
+          '20 sit-ups with support under the lower back, 20 push-ups, run 400m. 4 rounds.',
+          '30 second handstand, 30 second static squat, 30 second rest. 8 rounds.',
+          'Sprint 50 meters, 10 push-ups. 10 rounds.',
+          '50 air squats, 4 rounds. Rest 2 minutes between rounds.',
+          '20 jumping jacks, 20 burpees, 20 air squats. 3 rounds.',
+          'Run 100 meters and do 20 air squats. 10 rounds.',
+          '5 x 30 second handstands, then 2 x 800 meter runs for time. Rest between runs for as long as the first 800 took.',
+          '100 air squats, rest 3 minutes, 100 air squats.',
+          'Run with high knees for 15 seconds, drop into a push-up, get up and repeat 5 times. Each push-up counts as 1 rep. Rest, then do 3 more rounds.',
+          'Max set of push-ups: tight body, chest to the floor, full extension.',
+        ],
+      },
     ],
   },
 ]

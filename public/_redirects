@@ -63,5 +63,9 @@
 /strive-strength-conditioning-ssc /programs/strive/ssc/ 301
 /strive-strength-conditioning-ssc/ /programs/strive/ssc/ 301
 # Any other old coach or about page (keep these last)
+# Travel WODs
+/travel-wods-weekly-strength /travel-wods/ 301
+/travel-wods-weekly-strength/ /travel-wods/ 301
+/wp-content/uploads/travelwods.doc /travel-wods/ 301
 /trainer/* /team/ 301
 /about-us/* /team/ 301

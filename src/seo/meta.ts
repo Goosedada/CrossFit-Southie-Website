@@ -75,11 +75,11 @@ export const STATIC_PAGES: Record<string, PageMeta> = {
     description:
       'How to use Crossover Symmetry bands for shoulder activation, recovery and strength, from the CrossFit Southie archive.',
   },
-  '/travel-wods-weekly-strength': {
-    path: '/travel-wods-weekly-strength',
-    title: 'Travel WODs and Weekly Strength | CrossFit Southie',
+  '/travel-wods': {
+    path: '/travel-wods',
+    title: 'Travel WODs: No-Equipment Workouts | CrossFit Southie',
     description:
-      'An archived CrossFit Southie workout post: overhead squats, an interval workout, a weekly strength schedule and an at-home workout.',
+      'Workouts you can do on the road with little or no equipment: runs, squats, push-ups, burpees and Tabata intervals from CrossFit Southie.',
   },
   '/what-to-expect': {
     path: '/what-to-expect',

@@ -164,7 +164,7 @@ export const PricingPage = () => {
         'Single class access',
         'All class types included',
         'Day pass available',
-        'Weekly class available'
+        'Week pass for drop-ins: $75 for 7 days'
       ]
     }
   ]
