@@ -8,7 +8,7 @@ export const programs = [
     isFlagship: true
   },
   {
-    name: 'HYROX',
+    name: 'STRIVE HYROX',
     slug: 'hyrox',
     parent: 'strive',
     shortDescription: 'The world series of fitness racing. High-volume cardio and functional strength endurance.',
@@ -16,19 +16,19 @@ export const programs = [
     image: '/imgs/hyrox.jpg'
   },
   {
-    name: 'HIIT',
+    name: 'STRIVE HIIT',
     slug: 'hiit',
     parent: 'strive',
     shortDescription: 'Our signature conditioning-focused program. Low skill, maximum effort, total sweat.',
-    fullDescription: 'HIIT is high-intensity interval training that burns calories and improves cardiovascular fitness. Perfect for those new to fitness or looking for a fast-paced, effective workout. Classes feature a variety of exercises designed to maximize calorie burn and improve overall fitness in a supportive group environment.',
+    fullDescription: 'STRIVE HIIT is high-intensity interval training that burns calories and improves cardiovascular fitness. Perfect for those new to fitness or looking for a fast-paced, effective workout. Classes feature a variety of exercises designed to maximize calorie burn and improve overall fitness in a supportive group environment.',
     image: '/imgs/hiit.jpg'
   },
   {
-    name: 'STRENGTH & CONDITIONING',
+    name: 'STRIVE Strength & Conditioning',
     slug: 'ssc',
     parent: 'strive',
     shortDescription: 'Building lean muscle and improving athletic performance.',
-    fullDescription: 'STRENGTH & CONDITIONING is focused on building lean muscle, improving athletic performance, and enhancing overall fitness through structured strength training and conditioning. This program uses progressive overload and periodization to help you reach your strength and fitness goals.',
+    fullDescription: 'STRIVE Strength & Conditioning is focused on building lean muscle, improving athletic performance, and enhancing overall fitness through structured strength training and conditioning. This program uses progressive overload and periodization to help you reach your strength and fitness goals.',
     image: '/imgs/ssc.jpg'
   },
   {
@@ -50,7 +50,7 @@ export const programs = [
     name: 'STRIVE',
     slug: 'strive',
     shortDescription: 'HIIT, Strength & Conditioning and HYROX classes in one program.',
-    fullDescription: 'STRIVE is our program for people who want coached group training that builds conditioning, strength and endurance. One program gives you access to three types of classes: HIIT, Strength & Conditioning and HYROX.\n\nThree Ways To Train\nHIIT is our signature conditioning class: low skill, maximum effort. Strength & Conditioning builds lean muscle and athletic performance through progressive strength training. HYROX combines running with functional exercises to prepare you for fitness racing or simply improve your overall conditioning.\n\nMembership\nSTRIVE memberships include HIIT, Strength & Conditioning and HYROX classes, with 2x per week, 3x per week and unlimited options. They are monthly and can be cancelled at any time. CrossFit memberships also include access to these classes.',
+    fullDescription: 'STRIVE is our program for people who want coached group training that builds conditioning, strength and endurance. One program gives you access to three types of classes: HIIT, Strength & Conditioning and HYROX.\n\nThree Ways To Train\nSTRIVE HIIT is our signature conditioning class: low skill, maximum effort. STRIVE Strength & Conditioning builds lean muscle and athletic performance through progressive strength training. STRIVE HYROX combines running with functional exercises to prepare you for fitness racing or simply improve your overall conditioning.\n\nMembership\nSTRIVE memberships include HIIT, Strength & Conditioning and HYROX classes, with 2x per week, 3x per week and unlimited options. They are monthly and can be cancelled at any time. CrossFit memberships also include access to these classes.',
     image: '/imgs/hiit.jpg'
   }
 ]

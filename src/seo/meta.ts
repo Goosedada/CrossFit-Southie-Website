@@ -78,7 +78,7 @@ export const coachMeta = (coach: { name: string; slug: string; role: string; cer
 
 // Display names used in titles (the on-page program names have inconsistent casing).
 const PROGRAM_SEO_NAMES: Record<string, string> = {
-  ssc: 'Strength & Conditioning',
+  ssc: 'STRIVE Strength & Conditioning',
   'personal-training': 'Personal Training',
 }
 

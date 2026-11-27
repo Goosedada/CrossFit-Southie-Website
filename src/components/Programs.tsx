@@ -47,7 +47,7 @@ export const Programs = () => (
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0c1322] via-[#0c1322]/60 to-transparent" />
           <div className="absolute inset-0 flex flex-col justify-end p-6 sm:p-8">
-            <h3 className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl font-black text-white uppercase mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>HYROX</h3>
+            <h3 className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl font-black text-white uppercase mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>STRIVE HYROX</h3>
             <p className="text-sm sm:text-base" style={{ color: 'rgba(220, 226, 247, 0.8)' }}>{programs[1].shortDescription}</p>
           </div>
         </Link>
@@ -61,12 +61,26 @@ export const Programs = () => (
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0c1322] via-[#0c1322]/60 to-transparent" />
           <div className="absolute inset-0 flex flex-col justify-end p-6 sm:p-8">
-            <h3 className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl font-black text-white uppercase mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>HIIT</h3>
+            <h3 className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl font-black text-white uppercase mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>STRIVE HIIT</h3>
             <p className="text-sm sm:text-base" style={{ color: 'rgba(220, 226, 247, 0.8)' }}>{programs[2].shortDescription}</p>
           </div>
         </Link>
 
-        {/* Row 2: FUNDAMENTALS, STRENGTH & CONDITIONING, PRIVATE COACHING */}
+        {/* Row 2: STRENGTH & CONDITIONING, FUNDAMENTALS, PRIVATE COACHING */}
+        {/* STRENGTH & CONDITIONING */}
+        <Link to={programPath(programs[3])} className="group relative overflow-hidden rounded-xl min-h-[220px] lg:min-h-[320px] block" style={{ backgroundColor: '#232a3a' }}>
+          <img loading="lazy" decoding="async"
+            src={programs[3].image}
+            alt="STRIVE Strength & Conditioning"
+            className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0c1322] via-[#0c1322]/60 to-transparent" />
+          <div className="absolute inset-0 flex flex-col justify-end p-6 sm:p-8">
+            <h3 className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl font-black text-white uppercase mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>STRIVE Strength & Conditioning</h3>
+            <p className="text-sm sm:text-base" style={{ color: 'rgba(220, 226, 247, 0.8)' }}>{programs[3].shortDescription}</p>
+          </div>
+        </Link>
+
         {/* FUNDAMENTALS */}
         <Link to={programPath(programs[4])} className="group relative overflow-hidden rounded-xl min-h-[220px] lg:min-h-[320px] block" style={{ backgroundColor: '#232a3a' }}>
           <img loading="lazy" decoding="async"
@@ -78,20 +92,6 @@ export const Programs = () => (
           <div className="absolute inset-0 flex flex-col justify-end p-6 sm:p-8">
             <h3 className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl font-black text-white uppercase mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>FUNDAMENTALS</h3>
             <p className="text-sm sm:text-base" style={{ color: 'rgba(220, 226, 247, 0.8)' }}>{programs[4].shortDescription}</p>
-          </div>
-        </Link>
-
-        {/* STRENGTH & CONDITIONING */}
-        <Link to={programPath(programs[3])} className="group relative overflow-hidden rounded-xl min-h-[220px] lg:min-h-[320px] block" style={{ backgroundColor: '#232a3a' }}>
-          <img loading="lazy" decoding="async"
-            src={programs[3].image}
-            alt="Strength & Conditioning"
-            className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0c1322] via-[#0c1322]/60 to-transparent" />
-          <div className="absolute inset-0 flex flex-col justify-end p-6 sm:p-8">
-            <h3 className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl font-black text-white uppercase mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>STRENGTH & CONDITIONING</h3>
-            <p className="text-sm sm:text-base" style={{ color: 'rgba(220, 226, 247, 0.8)' }}>{programs[3].shortDescription}</p>
           </div>
         </Link>
 

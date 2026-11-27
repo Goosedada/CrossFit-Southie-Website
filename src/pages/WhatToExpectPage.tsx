@@ -98,7 +98,7 @@ export const WhatToExpectPage = () => {
             <div>
               <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Join the Community</h2>
               <p className="text-lg mb-4" style={{ color: 'rgba(220, 226, 247, 0.8)' }}>
-                Choose from CrossFit, HIIT, SSC, or HYROX training.
+                Choose from CrossFit, STRIVE HIIT, STRIVE Strength & Conditioning, or STRIVE HYROX training.
               </p>
               <ul className="space-y-2" style={{ color: 'rgba(220, 226, 247, 0.7)' }}>
                 <li className="flex items-start">
