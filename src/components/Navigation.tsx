@@ -95,6 +95,13 @@ export const Navigation = () => {
             {infoOpen && (
               <div className="absolute top-full left-0 mt-2 w-48 py-2 rounded shadow-lg" style={{ backgroundColor: '#191f2f' }}>
                 <Link
+                  to="/what-to-expect"
+                  className="block px-4 py-2 text-white hover:bg-gray-800 text-sm font-bold uppercase"
+                  onClick={() => setInfoOpen(false)}
+                >
+                  What to Expect
+                </Link>
+                <Link
                   to="/team"
                   className="block px-4 py-2 text-white hover:bg-gray-800 text-sm font-bold uppercase"
                   onClick={() => setInfoOpen(false)}
@@ -195,6 +202,7 @@ export const Navigation = () => {
             </button>
             {infoOpen && (
               <div className="pl-4 space-y-2 border-l border-gray-700">
+                <Link to="/what-to-expect" className="block text-white hover:text-gray-300 transition-colors text-sm font-bold uppercase">What to Expect</Link>
                 <Link to="/team" className="block text-white hover:text-gray-300 transition-colors text-sm font-bold uppercase">Our Team</Link>
                 <Link to="/pricing" className="block text-white hover:text-gray-300 transition-colors text-sm font-bold uppercase">Pricing</Link>
                 <Link to="/contact" className="block text-white hover:text-gray-300 transition-colors text-sm font-bold uppercase">Contact Us</Link>

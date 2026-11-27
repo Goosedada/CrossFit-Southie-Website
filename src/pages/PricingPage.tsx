@@ -142,7 +142,7 @@ export const PricingPage = () => {
         '8-session Fundamentals Course',
         'Proper movement patterns',
         'Build confidence',
-        'Runs monthly on Tues & Thurs at 7pm'
+        'Runs monthly on Mon & Thurs at 7pm'
       ]
     },
     {
