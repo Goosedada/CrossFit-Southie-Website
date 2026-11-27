@@ -8,6 +8,7 @@ export type ArchivePost = {
   note: string
   sections: ArchiveSection[]
   download?: { href: string; label: string }
+  video?: { youtubeId: string; title: string }
 }
 
 export const archivePosts: ArchivePost[] = [
@@ -16,6 +17,7 @@ export const archivePosts: ArchivePost[] = [
     title: 'Southie Showdown',
     date: '2023 event',
     note: 'This page describes the 2023 Southie Showdown, held September 30 and October 1, 2023. Registration for that event is closed.',
+    video: { youtubeId: 'guWZ2TjoBcY', title: 'Southie Showdown video' },
     sections: [
       {
         paragraphs: [
@@ -38,7 +40,7 @@ export const archivePosts: ArchivePost[] = [
     date: 'December 26, 2020',
     note: 'A workout from our archive.',
     sections: [
-      { paragraphs: ['“Dork” honors Michael Kennedy, a 33-year-old Boston firefighter and Marine Corps veteran of Iraq, who died fighting a nine-alarm fire on March 26, 2014. He was well known in the local CrossFit community as a coach and athlete.'] },
+      { image: { src: '/imgs/archive/hero-wod-dork.jpg', alt: 'Smiling firefighter in a helmet, from the Hero WOD “Dork” post', width: 554, height: 554 }, paragraphs: ['“Dork” honors Michael Kennedy, a 33-year-old Boston firefighter and Marine Corps veteran of Iraq, who died fighting a nine-alarm fire on March 26, 2014. He was well known in the local CrossFit community as a coach and athlete.'] },
       { heading: 'Workout: 6 rounds for time', list: ['60 double-unders', '30 kettlebell swings (1.5 / 1 pood)', '15 burpees'] },
       { heading: 'Scaling', list: ['Level 2: 1 / 0.75 pood', 'Level 1: 0.75 / 0.5 pood', 'Instead of double-unders: 120 single-unders or 60 mountain climbers'] },
       { heading: 'Coach’s tip', paragraphs: ['Choose a scale that lets you finish each round in about 3 to 4 minutes.'] },

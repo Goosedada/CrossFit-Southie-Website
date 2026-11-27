@@ -26,6 +26,18 @@ export const ArchivePostPage = ({ post }: { post: ArchivePost }) => {
               {post.download.label}
             </a>
           )}
+          {post.video && (
+            <div className="relative aspect-video mb-8 rounded-xl overflow-hidden" style={{ backgroundColor: '#232a3a' }}>
+              <iframe
+                src={`https://www.youtube.com/embed/${post.video.youtubeId}?rel=0`}
+                title={post.video.title}
+                loading="lazy"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full border-0"
+              />
+            </div>
+          )}
           {post.sections.map((section, i) => {
             const List = section.numbered ? 'ol' : 'ul'
             return (
