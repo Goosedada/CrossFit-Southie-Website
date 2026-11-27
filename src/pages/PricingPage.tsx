@@ -128,7 +128,7 @@ export const PricingPage = () => {
       features: [
         '20 classes',
         'HIIT, SSC & HYROX classes only',
-        'Expires after 5 months'
+        'Expires after 6 months'
       ]
     }
   ]
