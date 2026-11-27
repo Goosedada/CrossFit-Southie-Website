@@ -71,6 +71,12 @@ export const ProgramDetail = () => {
               </div>
             ))}
           </div>
+          {program.parent === 'strive' && (
+            <p className="text-lg font-bold mb-8 max-w-2xl mx-auto text-white">
+              {program.name} classes are included in the STRIVE ONLY membership and the CROSSFIT + STRIVE membership.{' '}
+              <Link to="/pricing" className="underline" style={{ color: '#dc2626' }}>See pricing</Link>
+            </p>
+          )}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="https://crossfitsouthie.sites.zenplanner.com/freeTrial.cfm"
