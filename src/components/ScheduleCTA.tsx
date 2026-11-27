@@ -12,7 +12,7 @@ export const ScheduleCTA = () => (
         READY TO GET STARTED?
       </h2>
       <p className="text-xl md:text-2xl mb-8 opacity-90 max-w-2xl mx-auto font-bold text-white">
-        Come experience the intensity and meet the community. Not seeing a free class that fits your schedule? Contact us and we will help schedule your first class.
+        Come try a class and meet the community. Not seeing a free class that fits your schedule? Contact us and we will help schedule your first class.
       </p>
       <div className="flex flex-col sm:flex-row gap-6 justify-center">
         <a

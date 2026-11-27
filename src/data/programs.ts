@@ -45,7 +45,6 @@ export const programs = [
     fullDescription: 'Our Personal Training program offers one-on-one personalized coaching tailored to your specific fitness goals. Includes custom programming, nutrition guidance, and individual attention from our certified personal trainers. Whether you are looking to lose weight, build muscle, prepare for competition, or rehabilitate an injury, our trainers will create a customized plan to help you achieve your goals.',
     image: '/imgs/personaltraining.png'
   },
-  // Keep new entries at the end: the home page cards refer to programs by position.
   {
     name: 'STRIVE',
     slug: 'strive',

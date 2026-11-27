@@ -18,8 +18,11 @@ export const Hero = () => (
         EVERYDAY<br/>
         <span style={{ color: '#dc2626' }}>ATHLETE</span>
       </h1>
-      <p className="text-base sm:text-lg md:text-2xl mb-6 sm:mb-10 max-w-xl leading-relaxed text-white">
-        From first-timers to seasoned athletes—we forge strength, grit, and lifelong bonds through expert coaching and real community.
+      <p className="text-xl sm:text-2xl md:text-3xl font-black uppercase tracking-tight mb-3 text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+        CrossFit <span style={{ color: '#dc2626' }}>+</span> STRIVE
+      </p>
+      <p className="text-base sm:text-lg md:text-2xl mb-6 sm:mb-10 max-w-2xl leading-relaxed text-white">
+        Two ways to train, one community. CrossFit for barbells, gymnastics and conditioning. STRIVE for HIIT, strength and HYROX with no barbells or high-skill gymnastics. Every class scales to you.
       </p>
       <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
         <a
@@ -34,7 +37,7 @@ export const Hero = () => (
           className="px-6 sm:px-10 py-3 sm:py-5 text-base sm:text-lg md:text-xl font-black uppercase tracking-tighter border transition-all hover:bg-white/10 text-center"
           style={{ borderColor: 'rgba(255,255,255,0.2)', color: 'white', fontFamily: "'Space Grotesk', sans-serif" }}
         >
-          View Programs
+          CrossFit or STRIVE?
         </a>
       </div>
     </div>
