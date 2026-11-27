@@ -77,6 +77,61 @@ export const PricingPage = () => {
     }
   ]
 
+  const crossfitPacks = [
+    {
+      name: '5 CLASS PACK',
+      price: '$135',
+      period: '/pack',
+      features: [
+        '5 classes',
+        'CrossFit, HIIT, SSC & HYROX classes',
+        'Expires after 2 months'
+      ]
+    },
+    {
+      name: '10 CLASS PACK',
+      price: '$250',
+      period: '/pack',
+      features: [
+        '10 classes',
+        'CrossFit, HIIT, SSC & HYROX classes',
+        'Expires after 4 months'
+      ]
+    }
+  ]
+
+  const strivePacks = [
+    {
+      name: '5 CLASS PACK',
+      price: '$99',
+      period: '/pack',
+      features: [
+        '5 classes',
+        'HIIT, SSC & HYROX classes only',
+        'Expires after 2 months'
+      ]
+    },
+    {
+      name: '10 CLASS PACK',
+      price: '$180',
+      period: '/pack',
+      features: [
+        '10 classes',
+        'HIIT, SSC & HYROX classes only'
+      ]
+    },
+    {
+      name: '20 CLASS PACK',
+      price: '$299',
+      period: '/pack',
+      features: [
+        '20 classes',
+        'HIIT, SSC & HYROX classes only',
+        'Expires after 5 months'
+      ]
+    }
+  ]
+
   const otherMemberships = [
     {
       name: 'CROSSFIT FUNDAMENTALS',
@@ -121,7 +176,7 @@ export const PricingPage = () => {
             MEMBERSHIP OPTIONS
           </h1>
           <p className="text-center mb-12 max-w-2xl mx-auto" style={{ color: 'rgba(220, 226, 247, 0.6)' }}>
-            All memberships are monthly and can be cancelled at any time.
+            All memberships are monthly and can be cancelled at any time. Class packs are also available.
           </p>
 
           <h3 className="text-2xl font-bold mb-6 text-center tracking-tight text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
@@ -159,6 +214,69 @@ export const PricingPage = () => {
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {striveMemberships.map((plan) => (
+              <div key={plan.name} className="p-6 rounded-lg transition-all text-center" style={{ backgroundColor: '#191f2f' }}>
+                <h4 className="text-xl font-bold mb-2 text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>{plan.name}</h4>
+                <div className="mb-4">
+                  <span className="text-3xl font-bold" style={{ color: '#dc2626' }}>{plan.price}</span>
+                  <span style={{ color: 'rgba(220, 226, 247, 0.6)' }}>{plan.period}</span>
+                </div>
+                <ul className="space-y-2 text-left inline-block">
+                  {plan.features.map((feature, index) => (
+                    <li key={index} className="text-sm flex items-start" style={{ color: 'rgba(220, 226, 247, 0.6)' }}>
+                      <ChevronRight className="w-4 h-4 mr-2 mt-0.5 flex-shrink-0" style={{ color: '#dc2626' }} />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href="https://crossfitsouthie.sites.zenplanner.com/sign-up-now.cfm"
+                  className="block mt-6 text-center px-6 py-3 font-bold tracking-wide transition-colors text-white"
+                  style={{ backgroundColor: '#dc2626' }}
+                >
+                  GET STARTED
+                </a>
+              </div>
+            ))}
+          </div>
+
+          <h3 className="text-2xl font-bold mb-6 text-center tracking-tight text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+            CLASS PACKS
+          </h3>
+          <h4 className="text-lg font-bold mb-4 text-center tracking-wide" style={{ color: 'rgba(220, 226, 247, 0.8)', fontFamily: "'Space Grotesk', sans-serif" }}>
+            CROSSFIT + STRIVE
+          </h4>
+          <div className="grid md:grid-cols-2 lg:w-2/3 lg:mx-auto gap-6 mb-12">
+            {crossfitPacks.map((plan) => (
+              <div key={plan.name} className="p-6 rounded-lg transition-all text-center" style={{ backgroundColor: '#191f2f' }}>
+                <h4 className="text-xl font-bold mb-2 text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>{plan.name}</h4>
+                <div className="mb-4">
+                  <span className="text-3xl font-bold" style={{ color: '#dc2626' }}>{plan.price}</span>
+                  <span style={{ color: 'rgba(220, 226, 247, 0.6)' }}>{plan.period}</span>
+                </div>
+                <ul className="space-y-2 text-left inline-block">
+                  {plan.features.map((feature, index) => (
+                    <li key={index} className="text-sm flex items-start" style={{ color: 'rgba(220, 226, 247, 0.6)' }}>
+                      <ChevronRight className="w-4 h-4 mr-2 mt-0.5 flex-shrink-0" style={{ color: '#dc2626' }} />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href="https://crossfitsouthie.sites.zenplanner.com/sign-up-now.cfm"
+                  className="block mt-6 text-center px-6 py-3 font-bold tracking-wide transition-colors text-white"
+                  style={{ backgroundColor: '#dc2626' }}
+                >
+                  GET STARTED
+                </a>
+              </div>
+            ))}
+          </div>
+
+          <h4 className="text-lg font-bold mb-4 text-center tracking-wide" style={{ color: 'rgba(220, 226, 247, 0.8)', fontFamily: "'Space Grotesk', sans-serif" }}>
+            STRIVE ONLY
+          </h4>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {strivePacks.map((plan) => (
               <div key={plan.name} className="p-6 rounded-lg transition-all text-center" style={{ backgroundColor: '#191f2f' }}>
                 <h4 className="text-xl font-bold mb-2 text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>{plan.name}</h4>
                 <div className="mb-4">

@@ -1,14 +1,49 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useEffect, useRef, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { menuPrograms, programPath, subPrograms } from '@/data/programs'
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [infoOpen, setInfoOpen] = useState(false)
   const [programsOpen, setProgramsOpen] = useState(false)
+  const navRef = useRef<HTMLElement>(null)
+  const { key } = useLocation()
+
+  const closeMenus = () => {
+    setIsOpen(false)
+    setInfoOpen(false)
+    setProgramsOpen(false)
+  }
+
+  // Close the menus when the page changes (including the browser's back button)
+  useEffect(closeMenus, [key])
+
+  // Close the menus on a tap outside them or the Escape key
+  useEffect(() => {
+    const onPointerDown = (e: PointerEvent) => {
+      if (!navRef.current?.contains(e.target as Node)) closeMenus()
+    }
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') closeMenus()
+    }
+    document.addEventListener('pointerdown', onPointerDown)
+    document.addEventListener('keydown', onKeyDown)
+    return () => {
+      document.removeEventListener('pointerdown', onPointerDown)
+      document.removeEventListener('keydown', onKeyDown)
+    }
+  }, [])
 
   return (
-    <nav className="fixed top-0 w-full z-50 backdrop-blur-md" style={{ backgroundColor: 'rgba(12, 19, 34, 0.6)' }}>
+    <nav
+      ref={navRef}
+      className="fixed top-0 w-full z-50 backdrop-blur-md"
+      style={{ backgroundColor: 'rgba(12, 19, 34, 0.6)' }}
+      // Close the menus as soon as any link in them is selected
+      onClick={(e) => {
+        if ((e.target as HTMLElement).closest('a')) closeMenus()
+      }}
+    >
       <div className="flex justify-between items-center w-full px-8 py-3">
         <Link to="/" className="flex items-center">
           <img src="/imgs/logo.png" alt="CrossFit Southie" className="h-12 md:h-16 w-auto" style={{ opacity: 0.85 }} />
@@ -18,7 +53,7 @@ export const Navigation = () => {
             <button
               className="font-bold uppercase tracking-tighter text-white hover:text-red-500 transition-colors duration-300 flex items-center"
               style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-              onClick={() => setProgramsOpen(!programsOpen)}
+              onClick={() => { setProgramsOpen(!programsOpen); setInfoOpen(false) }}
             >
               Programs
             </button>
@@ -53,7 +88,7 @@ export const Navigation = () => {
             <button
               className="font-bold uppercase tracking-tighter text-white hover:text-red-500 transition-colors duration-300 flex items-center"
               style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-              onClick={() => setInfoOpen(!infoOpen)}
+              onClick={() => { setInfoOpen(!infoOpen); setProgramsOpen(false) }}
             >
               Info
             </button>
@@ -118,7 +153,7 @@ export const Navigation = () => {
       </div>
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden py-4 px-8" style={{ backgroundColor: 'rgba(12, 19, 34, 0.95)' }}>
+        <div className="md:hidden py-4 px-8 max-h-[80vh] overflow-y-auto" style={{ backgroundColor: 'rgba(12, 19, 34, 0.95)' }}>
           <div className="flex flex-col space-y-4">
             <button
               className="font-bold uppercase tracking-tighter text-white text-left"
