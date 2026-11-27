@@ -35,7 +35,7 @@ export const programs = [
     name: 'Fundamentals',
     slug: 'fundamentals',
     shortDescription: 'Build a foundation before joining regular classes. Learn proper movement patterns.',
-    fullDescription: 'Our Fundamentals program is a CrossFit program specifically designed for beginners to build a foundation before joining regular classes. This 8-session course teaches proper movement patterns, builds confidence, and prepares you for group fitness classes. You will learn the basics of weightlifting, gymnastics, and conditioning in a safe and supportive environment. Ideal for those new to CrossFit or high-intensity training.',
+    fullDescription: 'Our Fundamentals program is a CrossFit program specifically designed for beginners to build a foundation before joining regular classes. This monthly course meets every Monday and Thursday at 7pm (except holidays). It teaches proper movement patterns, builds confidence, and prepares you for group fitness classes. You will learn the basics of weightlifting, gymnastics, and conditioning in a safe and supportive environment. Ideal for those new to CrossFit or high-intensity training.',
     image: '/imgs/fundamentals.jpg'
   },
   {
