@@ -125,7 +125,7 @@ export const PricingPage = () => {
           </p>
 
           <h3 className="text-2xl font-bold mb-6 text-center tracking-tight text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
-            CrossFit
+            CROSSFIT + STRIVE
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {crossfitMemberships.map((plan) => (
@@ -155,7 +155,7 @@ export const PricingPage = () => {
           </div>
 
           <h3 className="text-2xl font-bold mb-6 text-center tracking-tight text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
-            STRIVE & HYROX Only
+            STRIVE ONLY
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {striveMemberships.map((plan) => (

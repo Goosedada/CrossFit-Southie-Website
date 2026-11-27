@@ -31,10 +31,11 @@ export const FAQ = () => {
     },
     {
       question: "Do you accept drop-ins?",
-      answer: "Yes. Drop-ins are $30 each. To reserve and pay, select a CrossFit or Open Gym option on the schedule. Visiting from out of town? We also have a $75 week pass, which you can purchase on our membership page.",
+      answer: "Yes. Drop-ins are $30 each. To reserve and pay, select a CrossFit or Open Gym option on the schedule. Visiting from out of town? We also have a $75 week pass, which you can purchase on our membership page. You can also email info@crossfitsouthie.com and we can adjust the dates to your visit.",
       links: [
         { label: "View Schedule", href: "https://crossfitsouthie.sites.zenplanner.com/calendar.cfm" },
-        { label: "Membership Page", href: "/pricing" }
+        { label: "Membership Page", href: "https://crossfitsouthie.sites.zenplanner.com/sign-up-now.cfm" },
+        { label: "Email Us", href: "mailto:info@crossfitsouthie.com" }
       ]
     }
   ]
