@@ -24,6 +24,7 @@ function App() {
         <Route path="/what-to-expect" element={<WhatToExpectPage />} />
         <Route path="/coaches/:slug" element={<CoachDetail />} />
         <Route path="/programs/:slug" element={<ProgramDetail />} />
+        <Route path="/programs/:parent/:slug" element={<ProgramDetail />} />
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="*" element={<NotFoundPage />} />

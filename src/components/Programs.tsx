@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { programs } from '@/data/programs'
+import { programs, programPath } from '@/data/programs'
 
 export const Programs = () => (
   <section id="programs" className="py-4 px-6 md:px-8" style={{ backgroundColor: '#0c1322' }}>
@@ -24,7 +24,7 @@ export const Programs = () => (
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
         {/* Row 1: CrossFit, HYROX, Strive-X Hiit */}
         {/* CrossFit - Featured */}
-        <Link to={`/programs/${programs[0].slug}`} className="group relative overflow-hidden rounded-xl min-h-[280px] lg:min-h-[320px] block" style={{ backgroundColor: '#232a3a' }}>
+        <Link to={programPath(programs[0])} className="group relative overflow-hidden rounded-xl min-h-[280px] lg:min-h-[320px] block" style={{ backgroundColor: '#232a3a' }}>
           <img loading="lazy" decoding="async"
             src={programs[0].image}
             alt="CrossFit training"
@@ -39,7 +39,7 @@ export const Programs = () => (
         </Link>
 
         {/* HYROX */}
-        <Link to={`/programs/${programs[1].slug}`} className="group relative overflow-hidden rounded-xl min-h-[220px] lg:min-h-[320px] block" style={{ backgroundColor: '#2e3545' }}>
+        <Link to={programPath(programs[1])} className="group relative overflow-hidden rounded-xl min-h-[220px] lg:min-h-[320px] block" style={{ backgroundColor: '#2e3545' }}>
           <img loading="lazy" decoding="async"
             src={programs[1].image}
             alt="HYROX competition prep"
@@ -53,7 +53,7 @@ export const Programs = () => (
         </Link>
 
         {/* Strive-X Hiit */}
-        <Link to={`/programs/${programs[2].slug}`} className="group relative overflow-hidden rounded-xl min-h-[220px] lg:min-h-[320px] block" style={{ backgroundColor: '#2e3545' }}>
+        <Link to={programPath(programs[2])} className="group relative overflow-hidden rounded-xl min-h-[220px] lg:min-h-[320px] block" style={{ backgroundColor: '#2e3545' }}>
           <img loading="lazy" decoding="async"
             src={programs[2].image}
             alt="Strive X intensity"
@@ -68,7 +68,7 @@ export const Programs = () => (
 
         {/* Row 2: FUNDAMENTALS, STRENGTH & CONDITIONING, PRIVATE COACHING */}
         {/* FUNDAMENTALS */}
-        <Link to={`/programs/${programs[4].slug}`} className="group relative overflow-hidden rounded-xl min-h-[220px] lg:min-h-[320px] block" style={{ backgroundColor: '#232a3a' }}>
+        <Link to={programPath(programs[4])} className="group relative overflow-hidden rounded-xl min-h-[220px] lg:min-h-[320px] block" style={{ backgroundColor: '#232a3a' }}>
           <img loading="lazy" decoding="async"
             src={programs[4].image}
             alt="Fundamentals program"
@@ -82,7 +82,7 @@ export const Programs = () => (
         </Link>
 
         {/* STRENGTH & CONDITIONING */}
-        <Link to={`/programs/${programs[3].slug}`} className="group relative overflow-hidden rounded-xl min-h-[220px] lg:min-h-[320px] block" style={{ backgroundColor: '#232a3a' }}>
+        <Link to={programPath(programs[3])} className="group relative overflow-hidden rounded-xl min-h-[220px] lg:min-h-[320px] block" style={{ backgroundColor: '#232a3a' }}>
           <img loading="lazy" decoding="async"
             src={programs[3].image}
             alt="Strength & Conditioning"
@@ -96,7 +96,7 @@ export const Programs = () => (
         </Link>
 
         {/* PRIVATE COACHING */}
-        <Link to={`/programs/${programs[5].slug}`} className="group relative overflow-hidden rounded-xl min-h-[220px] lg:min-h-[320px] block" style={{ backgroundColor: '#232a3a' }}>
+        <Link to={programPath(programs[5])} className="group relative overflow-hidden rounded-xl min-h-[220px] lg:min-h-[320px] block" style={{ backgroundColor: '#232a3a' }}>
           <img loading="lazy" decoding="async"
             src={programs[5].image}
             alt="1-on-1 coaching session"

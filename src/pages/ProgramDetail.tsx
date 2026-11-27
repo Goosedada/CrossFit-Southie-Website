@@ -1,16 +1,20 @@
 import { useEffect } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link, Navigate, useParams } from 'react-router-dom'
 import { ArrowLeft } from 'lucide-react'
-import { programs } from '@/data/programs'
+import { programs, programPath, subPrograms } from '@/data/programs'
 import { Footer } from '@/components/Footer'
 import { usePageMeta } from '@/hooks/usePageMeta'
 import { notFoundMeta, programMeta } from '@/seo/meta'
 
 export const ProgramDetail = () => {
-  const { slug } = useParams()
-  const program = programs.find(p => p.slug === slug)
+  const { parent, slug } = useParams()
+  const match = programs.find(p => p.slug === slug)
+  // A nested URL is only valid under the program's real parent
+  const program = match && (!parent || parent === match.parent) ? match : undefined
+  const parentProgram = program?.parent ? programs.find(p => p.slug === program.parent) : undefined
+  const children = program ? subPrograms(program.slug) : []
 
-  usePageMeta(program ? programMeta(program) : notFoundMeta(`/programs/${slug}`))
+  usePageMeta(program ? programMeta(program) : notFoundMeta(parent ? `/programs/${parent}/${slug}` : `/programs/${slug}`))
 
   useEffect(() => {
     setTimeout(() => {
@@ -30,13 +34,18 @@ export const ProgramDetail = () => {
     )
   }
 
+  // Send old links such as /programs/hyrox to their new home
+  if (program.parent && !parent) {
+    return <Navigate to={programPath(program)} replace />
+  }
+
   return (
     <div className="font-sans pt-20">
       <section className="py-20 px-4" style={{ backgroundColor: '#0c1322' }}>
         <div className="max-w-4xl mx-auto text-center">
-          <Link to="/" className="inline-flex items-center mb-8 transition-colors" style={{ color: 'rgba(220, 226, 247, 0.6)' }}>
+          <Link to={parentProgram ? programPath(parentProgram) : '/'} className="inline-flex items-center mb-8 transition-colors" style={{ color: 'rgba(220, 226, 247, 0.6)' }}>
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Home
+            {parentProgram ? `Back to ${parentProgram.name}` : 'Back to Home'}
           </Link>
           <div className="aspect-video overflow-hidden rounded-lg mb-8 max-w-3xl mx-auto">
             <img
@@ -79,6 +88,36 @@ export const ProgramDetail = () => {
           </div>
         </div>
       </section>
+      {children.length > 0 && (
+        <section className="pb-20 px-4" style={{ backgroundColor: '#0c1322' }}>
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center tracking-tight text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+              {program.name.toUpperCase()} CLASSES
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+              {children.map((child) => (
+                <Link key={child.slug} to={programPath(child)} className="group relative overflow-hidden rounded-xl min-h-[280px] block" style={{ backgroundColor: '#232a3a' }}>
+                  <img loading="lazy" decoding="async"
+                    src={child.image}
+                    alt={child.name}
+                    className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0c1322] via-[#0c1322]/60 to-transparent" />
+                  <div className="absolute inset-0 flex flex-col justify-end p-6">
+                    <h3 className="text-2xl font-black text-white uppercase mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>{child.name}</h3>
+                    <p className="text-sm" style={{ color: 'rgba(220, 226, 247, 0.8)' }}>{child.shortDescription}</p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+            <p className="text-center mt-8">
+              <Link to="/pricing" className="font-bold uppercase tracking-widest text-sm hover:underline" style={{ color: '#dc2626', fontFamily: "'Space Grotesk', sans-serif" }}>
+                See membership pricing →
+              </Link>
+            </p>
+          </div>
+        </section>
+      )}
       <section className="py-16 px-4" style={{ backgroundColor: '#141b2b' }}>
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-2xl font-bold mb-4 text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>HAVE QUESTIONS?</h3>

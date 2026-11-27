@@ -10,6 +10,7 @@ export const programs = [
   {
     name: 'HYROX',
     slug: 'hyrox',
+    parent: 'strive',
     shortDescription: 'The world series of fitness racing. High-volume cardio and functional strength endurance.',
     fullDescription: 'HYROX is the World Series of Fitness Racing. Train for competition with running and functional exercises combined. Ideal for athletes preparing for HYROX events. This program combines endurance running with functional fitness exercises in a race format. Whether you are looking to compete in HYROX events or simply improve your overall conditioning, this program will push you to new limits.',
     image: '/imgs/hyrox.jpg'
@@ -17,6 +18,7 @@ export const programs = [
   {
     name: 'Strive-X Hiit',
     slug: 'strive-x-hiit',
+    parent: 'strive',
     shortDescription: 'Our signature conditioning-focused program. Low skill, maximum effort, total sweat.',
     fullDescription: 'Strive-X Hiit is high-intensity interval training that burns calories and improves cardiovascular fitness. Perfect for those new to fitness or looking for a fast-paced, effective workout. Classes feature a variety of exercises designed to maximize calorie burn and improve overall fitness in a supportive group environment.',
     image: '/imgs/hiit.jpg'
@@ -24,6 +26,7 @@ export const programs = [
   {
     name: 'STRENGTH & CONDITIONING',
     slug: 'ssc',
+    parent: 'strive',
     shortDescription: 'Building lean muscle and improving athletic performance.',
     fullDescription: 'STRENGTH & CONDITIONING is focused on building lean muscle, improving athletic performance, and enhancing overall fitness through structured strength training and conditioning. This program uses progressive overload and periodization to help you reach your strength and fitness goals.',
     image: '/imgs/ssc.jpg'
@@ -41,5 +44,26 @@ export const programs = [
     shortDescription: 'Individualized programming and 1-on-1 attention for specific goals and accelerated results.',
     fullDescription: 'Our Personal Training program offers one-on-one personalized coaching tailored to your specific fitness goals. Includes custom programming, nutrition guidance, and individual attention from our certified personal trainers. Whether you are looking to lose weight, build muscle, prepare for competition, or rehabilitate an injury, our trainers will create a customized plan to help you achieve your goals.',
     image: '/imgs/personaltraining.png'
+  },
+  // Keep new entries at the end: the home page cards refer to programs by position.
+  {
+    name: 'Strive',
+    slug: 'strive',
+    shortDescription: 'HIIT, Strength & Conditioning and HYROX classes in one program.',
+    fullDescription: 'Strive is our program for people who want coached group training that builds conditioning, strength and endurance. One program gives you access to three types of classes: HIIT, Strength & Conditioning and HYROX.\n\nThree Ways To Train\nStrive-X Hiit is our signature conditioning class: low skill, maximum effort. Strength & Conditioning builds lean muscle and athletic performance through progressive strength training. HYROX combines running with functional exercises to prepare you for fitness racing or simply improve your overall conditioning.\n\nMembership\nStrive memberships include HIIT, Strength & Conditioning and HYROX classes, with 2x per week, 3x per week and unlimited options. They are monthly and can be cancelled at any time. CrossFit memberships also include access to these classes.',
+    image: '/imgs/hiit.jpg'
   }
 ]
+
+export type Program = (typeof programs)[number]
+
+// Programs with a parent live under it, e.g. /programs/strive/hyrox
+export const programPath = (program: { slug: string; parent?: string }) =>
+  program.parent ? `/programs/${program.parent}/${program.slug}` : `/programs/${program.slug}`
+
+export const subPrograms = (slug: string) => programs.filter((p) => p.parent === slug)
+
+// Menu order for the top-level programs
+export const menuPrograms = ['crossfit', 'strive', 'fundamentals', 'personal-training'].map(
+  (slug) => programs.find((p) => p.slug === slug)!
+)

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { programs } from '@/data/programs'
+import { menuPrograms, programPath, subPrograms } from '@/data/programs'
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -23,16 +23,27 @@ export const Navigation = () => {
               Programs
             </button>
             {programsOpen && (
-              <div className="absolute top-full left-0 mt-2 w-56 py-2 rounded shadow-lg" style={{ backgroundColor: '#191f2f' }}>
-                {programs.map((program) => (
-                  <Link
-                    key={program.slug}
-                    to={`/programs/${program.slug}`}
-                    className="block px-4 py-2 text-white hover:bg-gray-800 text-sm font-bold uppercase"
-                    onClick={() => setProgramsOpen(false)}
-                  >
-                    {program.name}
-                  </Link>
+              <div className="absolute top-full left-0 mt-2 w-64 py-2 rounded shadow-lg" style={{ backgroundColor: '#191f2f' }}>
+                {menuPrograms.map((program) => (
+                  <div key={program.slug}>
+                    <Link
+                      to={programPath(program)}
+                      className="block px-4 py-2 text-white hover:bg-gray-800 text-sm font-bold uppercase"
+                      onClick={() => setProgramsOpen(false)}
+                    >
+                      {program.name}
+                    </Link>
+                    {subPrograms(program.slug).map((child) => (
+                      <Link
+                        key={child.slug}
+                        to={programPath(child)}
+                        className="block pl-8 pr-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800 text-xs font-bold uppercase"
+                        onClick={() => setProgramsOpen(false)}
+                      >
+                        {child.name}
+                      </Link>
+                    ))}
+                  </div>
                 ))}
               </div>
             )}
@@ -118,14 +129,24 @@ export const Navigation = () => {
             </button>
             {programsOpen && (
               <div className="pl-4 space-y-2 border-l border-gray-700">
-                {programs.map((program) => (
-                  <Link
-                    key={program.slug}
-                    to={`/programs/${program.slug}`}
-                    className="block text-white hover:text-gray-300 transition-colors text-sm font-bold uppercase"
-                  >
-                    {program.name}
-                  </Link>
+                {menuPrograms.map((program) => (
+                  <div key={program.slug} className="space-y-2">
+                    <Link
+                      to={programPath(program)}
+                      className="block text-white hover:text-gray-300 transition-colors text-sm font-bold uppercase"
+                    >
+                      {program.name}
+                    </Link>
+                    {subPrograms(program.slug).map((child) => (
+                      <Link
+                        key={child.slug}
+                        to={programPath(child)}
+                        className="block pl-4 text-gray-300 hover:text-white transition-colors text-xs font-bold uppercase"
+                      >
+                        {child.name}
+                      </Link>
+                    ))}
+                  </div>
                 ))}
               </div>
             )}
