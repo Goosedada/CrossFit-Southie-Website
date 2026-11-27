@@ -112,12 +112,12 @@ const PROGRAM_SEO_NAMES: Record<string, string> = {
   'personal-training': 'Personal Training',
 }
 
-export const programMeta = (program: { name: string; slug: string; parent?: string; shortDescription: string }): PageMeta => {
+export const programMeta = (program: { name: string; slug: string; parent?: string; shortDescription: string; seoDescription?: string }): PageMeta => {
   const name = PROGRAM_SEO_NAMES[program.slug] || program.name
   return {
     path: program.parent ? `/programs/${program.parent}/${program.slug}` : `/programs/${program.slug}`,
     title: `${name} in South Boston, MA | ${SITE_NAME}`,
-    description: truncate(`${program.shortDescription} Classes at ${SITE_NAME} in South Boston, MA.`, 158),
+    description: truncate(program.seoDescription || `${program.shortDescription} Classes at ${SITE_NAME} in South Boston, MA.`, 158),
   }
 }
 

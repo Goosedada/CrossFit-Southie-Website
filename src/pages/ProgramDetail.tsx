@@ -53,6 +53,7 @@ export const ProgramDetail = () => {
               src={program.image}
               alt={program.name}
               className="w-full h-full object-cover"
+              style={{ objectPosition: program.imagePosition }}
             />
           </div>
           <h1 className="text-3xl md:text-4xl font-bold mb-6 tracking-tight text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
@@ -82,22 +83,36 @@ export const ProgramDetail = () => {
               <Link to="/10-components-physical-fitness" className="underline" style={{ color: '#dc2626' }}>Read about the 10 components of physical fitness</Link>
             </p>
           )}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="https://crossfitsouthie.sites.zenplanner.com/freeTrial.cfm"
-              className="px-8 py-4 font-bold tracking-wide transition-colors text-center text-white"
-              style={{ backgroundColor: '#dc2626' }}
-            >
-              TRY A FREE CLASS
-            </a>
-            <a
-              href="https://crossfitsouthie.sites.zenplanner.com/sign-up-now.cfm"
-              className="px-8 py-4 border-2 font-bold tracking-wide transition-all text-center text-white"
-              style={{ borderColor: 'white' }}
-            >
-              JOIN NOW
-            </a>
-          </div>
+          {program.actions ? (
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              {program.actions.map((action, n) => {
+                const className = `px-8 py-4 font-bold tracking-wide transition-all text-center text-white${n ? ' border-2' : ''}`
+                const style = n ? { borderColor: 'white' } : { backgroundColor: '#dc2626' }
+                return action.href.startsWith('/') ? (
+                  <Link key={action.href} to={action.href} className={className} style={style}>{action.label}</Link>
+                ) : (
+                  <a key={action.href} href={action.href} className={className} style={style}>{action.label}</a>
+                )
+              })}
+            </div>
+          ) : (
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="https://crossfitsouthie.sites.zenplanner.com/freeTrial.cfm"
+                className="px-8 py-4 font-bold tracking-wide transition-colors text-center text-white"
+                style={{ backgroundColor: '#dc2626' }}
+              >
+                TRY A FREE CLASS
+              </a>
+              <a
+                href="https://crossfitsouthie.sites.zenplanner.com/sign-up-now.cfm"
+                className="px-8 py-4 border-2 font-bold tracking-wide transition-all text-center text-white"
+                style={{ borderColor: 'white' }}
+              >
+                JOIN NOW
+              </a>
+            </div>
+          )}
         </div>
       </section>
       {children.length > 0 && (

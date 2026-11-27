@@ -21,6 +21,7 @@ const ProgramCard = ({ slug, badge }: { slug: string; badge?: string }) => {
       <img loading="lazy" decoding="async"
         src={program.image}
         alt={program.name}
+        style={{ objectPosition: program.imagePosition }}
         className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-[#0c1322] via-[#0c1322]/60 to-transparent" />
@@ -66,8 +67,10 @@ export const Programs = () => (
       </div>
 
       <GroupHeading title="1-on-1" />
-      <div className="grid grid-cols-1 gap-4 md:gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
         <ProgramCard slug="personal-training" />
+        <ProgramCard slug="nutrition-coaching" />
+        <ProgramCard slug="physical-therapy" />
       </div>
     </div>
   </section>

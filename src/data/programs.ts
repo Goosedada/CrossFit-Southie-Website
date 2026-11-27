@@ -1,4 +1,21 @@
-export const programs = [
+export type ProgramAction = { label: string; href: string }
+
+export type Program = {
+  name: string
+  slug: string
+  parent?: string
+  shortDescription: string
+  fullDescription: string
+  image: string
+  imagePosition?: string
+  isFlagship?: boolean
+  // Replaces the free class and join buttons
+  actions?: ProgramAction[]
+  // Replaces the standard "... in South Boston" search listing text
+  seoDescription?: string
+}
+
+export const programs: Program[] = [
   {
     name: 'CrossFit',
     slug: 'crossfit',
@@ -39,11 +56,38 @@ export const programs = [
     image: '/imgs/fundamentals.jpg'
   },
   {
-    name: 'PRIVATE COACHING',
+    name: 'PERSONAL TRAINING',
     slug: 'personal-training',
     shortDescription: 'Individualized programming and 1-on-1 attention for specific goals and accelerated results.',
     fullDescription: 'Our Personal Training program offers one-on-one personalized coaching tailored to your specific fitness goals. Includes custom programming, nutrition guidance, and individual attention from our certified personal trainers. Whether you are looking to lose weight, build muscle, prepare for competition, or rehabilitate an injury, our trainers will create a customized plan to help you achieve your goals.',
     image: '/imgs/personaltraining.png'
+  },
+  {
+    name: 'Nutrition Coaching',
+    slug: 'nutrition-coaching',
+    shortDescription: '1-on-1 nutrition coaching with Coach Bobby Kasmire.',
+    fullDescription: 'One-on-one nutrition coaching with Coach Bobby Kasmire, who holds a Bachelor of Science in nutrition.\n\nGetting Started\nEmail info@crossfitsouthie.com to set up nutrition coaching.',
+    image: '/imgs/bobby.png',
+    imagePosition: '50% 15%',
+    actions: [
+      { label: 'EMAIL US', href: 'mailto:info@crossfitsouthie.com?subject=Nutrition%20Coaching' },
+      { label: 'MEET BOBBY', href: '/coaches/bobby-kasmire' }
+    ],
+    seoDescription: 'One-on-one nutrition coaching with Coach Bobby Kasmire, B.S. in nutrition, at CrossFit Southie in South Boston, MA.'
+  },
+  {
+    name: 'Physical Therapy',
+    slug: 'physical-therapy',
+    shortDescription: 'Carly Stote, DPT: Strength and Sports Physical Therapy, inside our gym.',
+    fullDescription: 'Carly Stote, Doctor of Physical Therapy, runs her own practice, Strength and Sports Physical Therapy & Recovery Center, in the PT room at the back of CrossFit Southie.\n\nWhat To Expect\nPersonalized, one-on-one physical therapy focused on relieving pain, restoring movement and getting you back to the activities and sports you love.\n\nTreatments\nDry needling, Graston, cupping, soft tissue massage, active release techniques and joint mobilizations.\n\nInsurance\nThe practice accepts most insurances and also offers cash-based services and bodywork recovery options.',
+    image: '/imgs/carly.png',
+    imagePosition: 'top',
+    actions: [
+      { label: 'SCHEDULE PT', href: 'https://www.myclinicportal.com/?mcp=0732b5d89h0qqm9ip0&g=1' },
+      { label: 'PRACTICE WEBSITE', href: 'https://www.strengthandsportsptboston.com' },
+      { label: 'MEET CARLY', href: '/coaches/carly-stote' }
+    ],
+    seoDescription: 'Physical therapy in South Boston with Carly Stote, DPT, of Strength and Sports Physical Therapy & Recovery Center, inside CrossFit Southie.'
   },
   {
     name: 'STRIVE',
@@ -54,8 +98,6 @@ export const programs = [
   }
 ]
 
-export type Program = (typeof programs)[number]
-
 // Programs with a parent live under it, e.g. /programs/strive/hyrox
 export const programPath = (program: { slug: string; parent?: string }) =>
   program.parent ? `/programs/${program.parent}/${program.slug}` : `/programs/${program.slug}`
@@ -63,6 +105,6 @@ export const programPath = (program: { slug: string; parent?: string }) =>
 export const subPrograms = (slug: string) => programs.filter((p) => p.parent === slug)
 
 // Menu order for the top-level programs
-export const menuPrograms = ['crossfit', 'strive', 'fundamentals', 'personal-training'].map(
+export const menuPrograms = ['crossfit', 'strive', 'fundamentals', 'personal-training', 'nutrition-coaching', 'physical-therapy'].map(
   (slug) => programs.find((p) => p.slug === slug)!
 )
