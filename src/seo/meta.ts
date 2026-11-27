@@ -51,6 +51,12 @@ export const STATIC_PAGES: Record<string, PageMeta> = {
     description:
       'Visit CrossFit Southie at 383 Dorchester Ave, South Boston, MA 02127. Class hours, parking and email.',
   },
+  '/10-components-physical-fitness': {
+    path: '/10-components-physical-fitness',
+    title: '10 Components of Physical Fitness | CrossFit Southie',
+    description:
+      'Endurance, stamina, strength, flexibility, power, speed, coordination, agility, balance and accuracy: the 10 components of fitness, explained.',
+  },
   '/what-to-expect': {
     path: '/what-to-expect',
     title: 'What to Expect at Your First Class | CrossFit Southie',
