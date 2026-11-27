@@ -100,7 +100,7 @@ export const coachMeta = (coach: { name: string; slug: string; role: string; cer
     path: `/coaches/${coach.slug}`,
     title: `${coach.name} - ${coach.role} | ${SITE_NAME}`,
     description: truncate(
-      `Meet ${coach.name}, ${withArticle(coach.role)} at ${SITE_NAME} in South Boston, MA.${certSentence}`,
+      `Meet ${coach.name}, ${withArticle(coach.role.replace(' | ', ' and '))} at ${SITE_NAME} in South Boston, MA.${certSentence}`,
       158
     ),
   }
