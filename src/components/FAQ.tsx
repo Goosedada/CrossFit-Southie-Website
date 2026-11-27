@@ -11,7 +11,7 @@ export const FAQ = () => {
     },
     {
       question: "Do I need to be fit before starting?",
-      answer: "Not at all. All levels are welcome. Anyone can do CrossFit, and our Fundamentals program is designed for beginners. It teaches the basic movements before you join regular classes."
+      answer: "Not at all. All levels are welcome. Anyone can do CrossFit, and our Fundamentals program is designed for beginners. It teaches the basic movements before you join regular classes. Our STRIVE classes have no barbells or high-skill gymnastics and are completely scalable."
     },
     {
       question: "What should I expect in my first class?",
@@ -19,7 +19,7 @@ export const FAQ = () => {
     },
     {
       question: "What are your membership options?",
-      answer: "We have memberships for CrossFit, STRIVE (HIIT, Strength & Conditioning, and Hyrox), and CrossFit Fundamentals. Plans are monthly and cancel anytime. CrossFit memberships range from $149/month for 2 classes per week to $249/month for unlimited. STRIVE & Hyrox memberships range from $125/month for 2 classes per week to $175/month for unlimited. CrossFit Fundamentals is $99/month. Drop-in classes are $30 each. See the full pricing page for details."
+      answer: "We have CROSSFIT + STRIVE memberships, STRIVE ONLY memberships (STRIVE HIIT, STRIVE Strength & Conditioning, and STRIVE HYROX), and CrossFit Fundamentals. Plans are monthly and cancel anytime. CROSSFIT + STRIVE memberships range from $149/month for 2 classes per week to $249/month for unlimited. STRIVE ONLY memberships range from $125/month for 2 classes per week to $175/month for unlimited. CrossFit Fundamentals is $99/month. Drop-in classes are $30 each. See the full pricing page for details."
     },
     {
       question: "Do you offer personal training?",
@@ -28,6 +28,11 @@ export const FAQ = () => {
     {
       question: "What are your gym hours?",
       answer: "Our staffed hours are Monday to Thursday 5am to 8pm, Friday 5am to 7pm, Saturday 7am to 1pm, and Sunday 9am to 12pm. Unlimited CrossFit members have open gym access during staffed hours. You can add 24-hour access for a $10/month add-on, which lets you use the gym during non-staffed hours. Check the schedule for class times, which vary throughout the day."
+    },
+    {
+      question: "Do you accept drop-ins?",
+      answer: "Yes. Drop-ins are $30 each. To reserve and pay, select a CrossFit or Open Gym option on the schedule.",
+      link: { label: "View Schedule", href: "https://crossfitsouthie.sites.zenplanner.com/calendar.cfm" }
     }
   ]
 
@@ -72,6 +77,11 @@ export const FAQ = () => {
                   <p className="text-base leading-relaxed" style={{ color: 'rgba(220, 226, 247, 0.8)' }}>
                     {faq.answer}
                   </p>
+                  {faq.link && (
+                    <a href={faq.link.href} className="inline-block mt-3 font-bold uppercase tracking-wide text-sm hover:underline" style={{ color: '#dc2626', fontFamily: "'Space Grotesk', sans-serif" }}>
+                      {faq.link.label} →
+                    </a>
+                  )}
                 </div>
               )}
             </div>
