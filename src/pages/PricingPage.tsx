@@ -235,7 +235,7 @@ export const PricingPage = () => {
         href="https://crossfitsouthie.sites.zenplanner.com/sign-up-now.cfm"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 px-8 py-4 font-bold tracking-wide text-white shadow-lg transition-all hover:scale-105"
+        className="fixed bottom-24 md:bottom-6 left-1/2 transform -translate-x-1/2 z-50 whitespace-nowrap px-8 py-4 font-bold tracking-wide text-white shadow-lg transition-all hover:scale-105"
         style={{ backgroundColor: '#dc2626' }}
       >
         Review All Options
