@@ -66,14 +66,14 @@ export const programs: Program[] = [
     name: 'Nutrition Coaching',
     slug: 'nutrition-coaching',
     shortDescription: '1-on-1 nutrition coaching with Coach Bobby Kasmire.',
-    fullDescription: 'One-on-one nutrition coaching with Coach Bobby Kasmire, who holds a Bachelor of Science in nutrition.\n\nGetting Started\nEmail info@crossfitsouthie.com to set up nutrition coaching.',
+    fullDescription: 'One-on-one nutrition coaching with Coach Bobby Kasmire, who holds a Bachelor of Science in Nutrition Sciences.\n\nGetting Started\nEmail info@crossfitsouthie.com to set up nutrition coaching.',
     image: '/imgs/bobby.png',
     imagePosition: '50% 15%',
     actions: [
       { label: 'EMAIL US', href: 'mailto:info@crossfitsouthie.com?subject=Nutrition%20Coaching' },
       { label: 'MEET BOBBY', href: '/coaches/bobby-kasmire' }
     ],
-    seoDescription: 'One-on-one nutrition coaching with Coach Bobby Kasmire, B.S. in nutrition, at CrossFit Southie in South Boston, MA.'
+    seoDescription: 'One-on-one nutrition coaching with Coach Bobby Kasmire, B.S. in Nutrition Sciences, at CrossFit Southie in South Boston, MA.'
   },
   {
     name: 'Physical Therapy',
