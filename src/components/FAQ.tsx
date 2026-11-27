@@ -76,8 +76,8 @@ export const FAQ = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              {openIndex === index && (
-                <div className="px-6 pb-4">
+              {/* Always in the page so search engines can read the answers */}
+                <div className="px-6 pb-4" hidden={openIndex !== index}>
                   <p className="text-base leading-relaxed" style={{ color: 'rgba(220, 226, 247, 0.8)' }}>
                     {faq.answer}
                   </p>
@@ -87,7 +87,6 @@ export const FAQ = () => {
                     </a>
                   ))}
                 </div>
-              )}
             </div>
           ))}
         </div>
