@@ -117,7 +117,8 @@ export const PricingPage = () => {
       period: '/pack',
       features: [
         '10 classes',
-        'HIIT, SSC & HYROX classes only'
+        'HIIT, SSC & HYROX classes only',
+        'Expires after 4 months'
       ]
     },
     {
