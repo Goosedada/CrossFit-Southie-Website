@@ -31,8 +31,11 @@ export const FAQ = () => {
     },
     {
       question: "Do you accept drop-ins?",
-      answer: "Yes. Drop-ins are $30 each. To reserve and pay, select a CrossFit or Open Gym option on the schedule.",
-      link: { label: "View Schedule", href: "https://crossfitsouthie.sites.zenplanner.com/calendar.cfm" }
+      answer: "Yes. Drop-ins are $30 each. To reserve and pay, select a CrossFit or Open Gym option on the schedule. Visiting from out of town? We also have a $75 week pass, which you can purchase on our membership page.",
+      links: [
+        { label: "View Schedule", href: "https://crossfitsouthie.sites.zenplanner.com/calendar.cfm" },
+        { label: "Membership Page", href: "/pricing" }
+      ]
     }
   ]
 
@@ -77,11 +80,11 @@ export const FAQ = () => {
                   <p className="text-base leading-relaxed" style={{ color: 'rgba(220, 226, 247, 0.8)' }}>
                     {faq.answer}
                   </p>
-                  {faq.link && (
-                    <a href={faq.link.href} className="inline-block mt-3 font-bold uppercase tracking-wide text-sm hover:underline" style={{ color: '#dc2626', fontFamily: "'Space Grotesk', sans-serif" }}>
-                      {faq.link.label} →
+                  {faq.links?.map((link) => (
+                    <a key={link.href} href={link.href} className="inline-block mt-3 mr-6 font-bold uppercase tracking-wide text-sm hover:underline" style={{ color: '#dc2626', fontFamily: "'Space Grotesk', sans-serif" }}>
+                      {link.label} →
                     </a>
-                  )}
+                  ))}
                 </div>
               )}
             </div>

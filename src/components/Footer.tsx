@@ -28,7 +28,7 @@ export const Footer = () => (
         <div>
           <h4 className="font-bold uppercase text-xs tracking-[0.2em] mb-4 text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Contact</h4>
           <ul className="space-y-3">
-            <li><a href="mailto:info@crossfitsouthie.com" className="text-sm hover:text-white transition-all" style={{ color: 'rgba(220, 226, 247, 0.6)' }}>info@crossfitsouthie.com</a> <span className="text-xs" style={{ color: '#dc2626' }}>(preferred)</span></li>
+            <li><a href="mailto:info@crossfitsouthie.com" className="text-sm hover:text-white transition-all" style={{ color: 'rgba(220, 226, 247, 0.6)' }}>info@crossfitsouthie.com</a></li>
           </ul>
         </div>
 
