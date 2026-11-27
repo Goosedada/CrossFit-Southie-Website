@@ -1,6 +1,5 @@
 import { Hero } from '@/components/Hero'
 import { About } from '@/components/About'
-import { VideoSection } from '@/components/VideoSection'
 import { Programs } from '@/components/Programs'
 import { Community } from '@/components/Community'
 import { Coaches } from '@/components/Coaches'
@@ -17,7 +16,6 @@ export const HomePage = () => (
   <>
     <Hero />
     <About />
-    <VideoSection />
     <Programs />
     <Community />
     <Coaches />
