@@ -22,11 +22,11 @@ export const HomePage = () => (
     <Community />
     <Coaches />
     <ScheduleCTA />
+    <FAQ />
     <ReviewStats />
     <Testimonials />
     <InstagramFeed />
     <PressSection />
-    <FAQ />
     <Location />
     <Footer />
   </>
