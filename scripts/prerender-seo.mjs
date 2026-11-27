@@ -6,7 +6,7 @@
 //
 // This script fixes that without changing how the app works. From dist/index.html it writes:
 //   dist/<route>/index.html   one file per page, with that page's own <title>, description,
-//                             canonical URL and social tags (served with a normal 200 status)
+//                             canonical URL, social tags and page text (served with a 200 status)
 //   dist/404.html             used by the host for unknown URLs (marked noindex)
 //   dist/sitemap.xml          every page, generated from src/data (so it never goes stale)
 //   dist/robots.txt           only if you don't already ship one in public/
@@ -15,8 +15,9 @@
 
 import fs from 'node:fs'
 import path from 'node:path'
-import { fileURLToPath } from 'node:url'
+import { fileURLToPath, pathToFileURL } from 'node:url'
 import ts from 'typescript'
+import { build } from 'vite'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const dist = path.join(root, 'dist')
@@ -38,6 +39,15 @@ if (!fs.existsSync(path.join(dist, 'index.html'))) {
   process.exit(1)
 }
 const template = fs.readFileSync(path.join(dist, 'index.html'), 'utf8')
+
+// ---- compile the app for Node so each page's content can be rendered to HTML ----
+const ssrDir = path.join(root, 'node_modules', '.prerender')
+await build({
+  root,
+  logLevel: 'warn',
+  build: { ssr: 'src/entry-server.tsx', outDir: ssrDir, emptyOutDir: true, rollupOptions: { output: { entryFileNames: 'entry-server.mjs' } } },
+})
+const { render } = await import(pathToFileURL(path.join(ssrDir, 'entry-server.mjs')).href)
 
 // ---- helpers ----
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
@@ -72,6 +82,9 @@ function renderPage(meta, { home = false } = {}) {
   if (!home) {
     html = html.replace(/\s*<script type="application\/ld\+json" data-home-only>[\s\S]*?<\/script>/g, '')
   }
+  // Put the page's rendered content inside the app's root element.
+  const body = render(meta.path)
+  html = replaceOrFail(html, /<div id="root"><\/div>/, () => `<div id="root">${body}</div>`, 'empty #root')
   return html
 }
 

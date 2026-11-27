@@ -10,6 +10,7 @@ import { CoachDetail } from '@/pages/CoachDetail'
 import { ProgramDetail } from '@/pages/ProgramDetail'
 import { WhatToExpectPage } from '@/pages/WhatToExpectPage'
 import { ContactPage } from '@/pages/ContactPage'
+import { FitnessComponentsPage } from '@/pages/FitnessComponentsPage'
 import { NotFoundPage } from '@/pages/NotFoundPage'
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <Route path="/programs/:parent/:slug" element={<ProgramDetail />} />
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/10-components-physical-fitness" element={<FitnessComponentsPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <FloatingCTA />

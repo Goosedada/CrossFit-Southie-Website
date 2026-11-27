@@ -77,6 +77,11 @@ export const ProgramDetail = () => {
               <Link to="/pricing" className="underline" style={{ color: '#dc2626' }}>See pricing</Link>
             </p>
           )}
+          {program.slug === 'crossfit' && (
+            <p className="text-lg mb-8 text-white">
+              <Link to="/10-components-physical-fitness" className="underline" style={{ color: '#dc2626' }}>Read about the 10 components of physical fitness</Link>
+            </p>
+          )}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="https://crossfitsouthie.sites.zenplanner.com/freeTrial.cfm"
