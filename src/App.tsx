@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import { Navigation } from '@/components/Navigation'
 import { FloatingCTA } from '@/components/FloatingCTA'
+import HelpBot from '@/components/HelpBot'
 import { ScrollToHash } from '@/components/ScrollToHash'
 import { RouteMeta } from '@/components/RouteMeta'
 import { HomePage } from '@/pages/HomePage'
@@ -29,6 +30,7 @@ function App() {
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <FloatingCTA />
+      <HelpBot />
     </div>
   )
 }
