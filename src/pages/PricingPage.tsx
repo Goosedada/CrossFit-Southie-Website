@@ -10,10 +10,7 @@ export const PricingPage = () => {
       period: '/month',
       features: [
         'Unlimited CrossFit classes',
-        'Unlimited HIIT, SSC & HYROX classes',
         'Open gym access',
-        'Member app access',
-        'Nutrition guidance',
         '+ $10 for 24 Hour Access'
       ]
     },
@@ -22,10 +19,7 @@ export const PricingPage = () => {
       price: '$199',
       period: '/month',
       features: [
-        '3 CrossFit classes per week',
-        'Access to all HIIT, SSC & HYROX classes',
-        'Member app access',
-        'Nutrition guidance'
+        '3 CrossFit classes per week'
       ]
     },
     {
@@ -33,10 +27,7 @@ export const PricingPage = () => {
       price: '$149',
       period: '/month',
       features: [
-        '2 CrossFit classes per week',
-        'Access to all HIIT, SSC & HYROX classes',
-        'Member app access',
-        'Nutrition guidance'
+        '2 CrossFit classes per week'
       ]
     }
   ]
@@ -47,10 +38,7 @@ export const PricingPage = () => {
       price: '$175',
       period: '/month',
       features: [
-        'Unlimited HIIT, SSC & HYROX classes',
-        'No CrossFit access',
-        'Member app access',
-        'Nutrition guidance'
+        'Unlimited classes'
       ]
     },
     {
@@ -58,10 +46,7 @@ export const PricingPage = () => {
       price: '$149',
       period: '/month',
       features: [
-        '3 HIIT, SSC & HYROX classes per week',
-        'No CrossFit access',
-        'Member app access',
-        'Nutrition guidance'
+        '3 classes per week'
       ]
     },
     {
@@ -69,10 +54,7 @@ export const PricingPage = () => {
       price: '$119',
       period: '/month',
       features: [
-        '2 HIIT, SSC & HYROX classes per week',
-        'No CrossFit access',
-        'Member app access',
-        'Nutrition guidance'
+        '2 classes per week'
       ]
     }
   ]
@@ -84,7 +66,6 @@ export const PricingPage = () => {
       period: '/pack',
       features: [
         '5 classes',
-        'CrossFit, HIIT, SSC & HYROX classes',
         'Expires after 2 months'
       ]
     },
@@ -94,7 +75,6 @@ export const PricingPage = () => {
       period: '/pack',
       features: [
         '10 classes',
-        'CrossFit, HIIT, SSC & HYROX classes',
         'Expires after 4 months'
       ]
     }
@@ -107,7 +87,6 @@ export const PricingPage = () => {
       period: '/pack',
       features: [
         '5 classes',
-        'HIIT, SSC & HYROX classes only',
         'Expires after 2 months'
       ]
     },
@@ -117,7 +96,6 @@ export const PricingPage = () => {
       period: '/pack',
       features: [
         '10 classes',
-        'HIIT, SSC & HYROX classes only',
         'Expires after 4 months'
       ]
     },
@@ -127,7 +105,6 @@ export const PricingPage = () => {
       period: '/pack',
       features: [
         '20 classes',
-        'HIIT, SSC & HYROX classes only',
         'Expires after 6 months'
       ]
     }
@@ -163,8 +140,16 @@ export const PricingPage = () => {
       features: [
         'Single class access',
         'All class types included',
-        'Day pass available',
-        'Week pass for drop-ins: $75 for 7 days'
+        'Day pass available'
+      ]
+    },
+    {
+      name: 'WEEKLY DROP-IN',
+      price: '$75',
+      period: '/week',
+      features: [
+        '7 days of drop-in access',
+        'All class types included'
       ]
     }
   ]
@@ -180,9 +165,12 @@ export const PricingPage = () => {
             All memberships are monthly and can be cancelled at any time. Class packs are also available.
           </p>
 
-          <h3 className="text-2xl font-bold mb-6 text-center tracking-tight text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+          <h3 className="text-2xl font-bold mb-3 text-center tracking-tight text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
             CROSSFIT + STRIVE
           </h3>
+          <p className="text-center mb-6 max-w-3xl mx-auto font-medium" style={{ color: 'rgba(220, 226, 247, 0.85)' }}>
+            All memberships include access to all HIIT, SSC &amp; HYROX classes, member app access and group nutrition guidance.
+          </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {crossfitMemberships.map((plan) => (
               <div key={plan.name} className="p-6 rounded-lg transition-all text-center" style={{ backgroundColor: '#191f2f' }}>
@@ -210,9 +198,12 @@ export const PricingPage = () => {
             ))}
           </div>
 
-          <h3 className="text-2xl font-bold mb-6 text-center tracking-tight text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+          <h3 className="text-2xl font-bold mb-3 text-center tracking-tight text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
             STRIVE ONLY
           </h3>
+          <p className="text-center mb-6 max-w-3xl mx-auto font-medium" style={{ color: 'rgba(220, 226, 247, 0.85)' }}>
+            All memberships include HIIT, SSC &amp; HYROX classes (no CrossFit), member app access and group nutrition guidance.
+          </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {striveMemberships.map((plan) => (
               <div key={plan.name} className="p-6 rounded-lg transition-all text-center" style={{ backgroundColor: '#191f2f' }}>
@@ -243,9 +234,12 @@ export const PricingPage = () => {
           <h3 className="text-2xl font-bold mb-6 text-center tracking-tight text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
             CLASS PACKS
           </h3>
-          <h4 className="text-lg font-bold mb-4 text-center tracking-wide" style={{ color: 'rgba(220, 226, 247, 0.8)', fontFamily: "'Space Grotesk', sans-serif" }}>
+          <h4 className="text-lg font-bold mb-3 text-center tracking-wide" style={{ color: 'rgba(220, 226, 247, 0.8)', fontFamily: "'Space Grotesk', sans-serif" }}>
             CROSSFIT + STRIVE
           </h4>
+          <p className="text-center mb-6 max-w-3xl mx-auto font-medium" style={{ color: 'rgba(220, 226, 247, 0.85)' }}>
+            All class packs include CrossFit, HIIT, SSC &amp; HYROX classes.
+          </p>
           <div className="grid md:grid-cols-2 lg:w-2/3 lg:mx-auto gap-6 mb-12">
             {crossfitPacks.map((plan) => (
               <div key={plan.name} className="p-6 rounded-lg transition-all text-center" style={{ backgroundColor: '#191f2f' }}>
@@ -273,9 +267,12 @@ export const PricingPage = () => {
             ))}
           </div>
 
-          <h4 className="text-lg font-bold mb-4 text-center tracking-wide" style={{ color: 'rgba(220, 226, 247, 0.8)', fontFamily: "'Space Grotesk', sans-serif" }}>
+          <h4 className="text-lg font-bold mb-3 text-center tracking-wide" style={{ color: 'rgba(220, 226, 247, 0.8)', fontFamily: "'Space Grotesk', sans-serif" }}>
             STRIVE ONLY
           </h4>
+          <p className="text-center mb-6 max-w-3xl mx-auto font-medium" style={{ color: 'rgba(220, 226, 247, 0.85)' }}>
+            All class packs include HIIT, SSC &amp; HYROX classes only.
+          </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {strivePacks.map((plan) => (
               <div key={plan.name} className="p-6 rounded-lg transition-all text-center" style={{ backgroundColor: '#191f2f' }}>
@@ -306,7 +303,7 @@ export const PricingPage = () => {
           <h3 className="text-2xl font-bold mb-6 text-center tracking-tight text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
             OTHER
           </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {otherMemberships.map((plan) => (
               <div key={plan.name} className="p-6 rounded-lg transition-all text-center" style={{ backgroundColor: '#191f2f' }}>
                 <h4 className="text-xl font-bold mb-2 text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>{plan.name}</h4>
