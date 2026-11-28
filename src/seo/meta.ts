@@ -29,9 +29,9 @@ export const truncate = (text: string, max: number) => {
 export const STATIC_PAGES: Record<string, PageMeta> = {
   '/': {
     path: '/',
-    title: 'CrossFit, STRIVE & HIIT in South Boston, MA | CrossFit Southie',
+    title: 'South Boston Gym: CrossFit, STRIVE & HIIT | CrossFit Southie',
     description:
-      'CrossFit and STRIVE (HIIT, strength and HYROX) classes in South Boston. Expert coaches, a supportive community and 24-hour access. Try a free class!',
+      'A South Boston gym for CrossFit, STRIVE HIIT, strength, HYROX and personal training. Expert coaches and 24-hour access. Try a free class!',
   },
   '/team': {
     path: '/team',

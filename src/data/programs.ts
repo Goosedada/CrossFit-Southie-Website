@@ -1,5 +1,7 @@
 export type ProgramAction = { label: string; href: string }
 
+export type ProgramSection = { heading: string; text: string; link?: { label: string; href: string } }
+
 export type Program = {
   name: string
   slug: string
@@ -13,6 +15,9 @@ export type Program = {
   actions?: ProgramAction[]
   // Replaces the standard "... in South Boston" search listing text
   seoDescription?: string
+  // Longer page content shown under the buttons
+  sections?: ProgramSection[]
+  faqs?: { q: string; a: string }[]
 }
 
 export const programs: Program[] = [
@@ -38,6 +43,18 @@ export const programs: Program[] = [
     parent: 'strive',
     shortDescription: 'Our signature conditioning-focused program. Low skill, maximum effort, total sweat.',
     fullDescription: 'STRIVE HIIT is high-intensity interval training that burns calories and improves cardiovascular fitness. Perfect for those new to fitness or looking for a fast-paced, effective workout. Classes feature a variety of exercises designed to maximize calorie burn and improve overall fitness in a supportive group environment.',
+    seoDescription: 'STRIVE HIIT classes at our South Boston gym. Coached, scalable interval training with no barbells. From $125 a month. Try a free class.',
+    sections: [
+      { heading: 'Who STRIVE HIIT is for', text: 'STRIVE HIIT suits anyone who wants a fast-paced, coached group workout at our South Boston gym, including people who are new to fitness. There are no barbells or high-skill gymnastics, and every class is completely scalable.' },
+      { heading: 'What a class trains', text: 'High-intensity interval training alternates hard efforts with recovery. Classes use a variety of exercises to build cardiovascular fitness, burn calories and improve overall conditioning, with a coach leading the group.', link: { label: 'See the class schedule', href: 'https://crossfitsouthie.sites.zenplanner.com/calendar.cfm' } },
+      { heading: 'HIIT class pricing', text: 'STRIVE ONLY memberships are $125 a month for 2 classes a week, $150 for 3 and $175 for unlimited. Each includes STRIVE HIIT, STRIVE Strength & Conditioning and STRIVE HYROX. CROSSFIT + STRIVE memberships, from $149 a month, include these classes too. Memberships are monthly and can be cancelled any time. STRIVE class packs are $99 for 5, $180 for 10 and $299 for 20, and a single drop-in class is $30.', link: { label: 'See all pricing', href: '/pricing' } },
+      { heading: 'Visit our South Boston gym', text: 'We are at 383 Dorchester Ave Front in South Boston, with two large shared parking lots. Staffed hours are Monday to Thursday 5am to 8pm, Friday 5am to 7pm, Saturday 7am to 1pm and Sunday 9am to 12pm.', link: { label: 'Get directions', href: '/contact' } },
+    ],
+    faqs: [
+      { q: 'Do I need to be in shape to start?', a: 'No. All levels are welcome and every class scales to you.' },
+      { q: 'What happens at my first class?', a: 'Your first class is a complimentary intro session. Arrive 5 to 10 minutes early, wear workout gear and bring a water bottle.' },
+      { q: 'Are there barbells in STRIVE HIIT?', a: 'No. STRIVE classes have no barbells or high-skill gymnastics.' },
+    ],
     image: '/imgs/hiit.jpg'
   },
   {
@@ -46,6 +63,18 @@ export const programs: Program[] = [
     parent: 'strive',
     shortDescription: 'Building lean muscle and improving athletic performance.',
     fullDescription: 'STRIVE Strength & Conditioning is focused on building lean muscle, improving athletic performance, and enhancing overall fitness through structured strength training and conditioning. This program uses progressive overload and periodization to help you reach your strength and fitness goals.',
+    seoDescription: 'Coached strength and conditioning classes at our South Boston gym. Scalable, no barbells, from $125 a month. Try a free class.',
+    sections: [
+      { heading: 'Who Strength & Conditioning is for', text: 'This class is for people who want structured, coached strength training in a group at our South Boston gym. There are no barbells or high-skill gymnastics, and every class is completely scalable.' },
+      { heading: 'How the training works', text: 'Workouts combine strength training with conditioning. Progressive overload means the challenge builds gradually as you get stronger, and periodization organizes training into phases, so you can build lean muscle and improve athletic performance.', link: { label: 'See the class schedule', href: 'https://crossfitsouthie.sites.zenplanner.com/calendar.cfm' } },
+      { heading: 'Strength class pricing', text: 'STRIVE ONLY memberships are $125 a month for 2 classes a week, $150 for 3 and $175 for unlimited. Each includes STRIVE HIIT, STRIVE Strength & Conditioning and STRIVE HYROX. CROSSFIT + STRIVE memberships, from $149 a month, include these classes too. Memberships are monthly and can be cancelled any time. STRIVE class packs are $99 for 5, $180 for 10 and $299 for 20, and a single drop-in class is $30.', link: { label: 'See all pricing', href: '/pricing' } },
+      { heading: 'Visit our South Boston gym', text: 'We are at 383 Dorchester Ave Front in South Boston, with two large shared parking lots. Staffed hours are Monday to Thursday 5am to 8pm, Friday 5am to 7pm, Saturday 7am to 1pm and Sunday 9am to 12pm.', link: { label: 'Get directions', href: '/contact' } },
+    ],
+    faqs: [
+      { q: 'Do I need strength training experience?', a: 'No. All levels are welcome and every class scales to you.' },
+      { q: 'What happens at my first class?', a: 'Your first class is a complimentary intro session. Arrive 5 to 10 minutes early, wear workout gear and bring a water bottle.' },
+      { q: 'Does the class use barbells?', a: 'No. STRIVE classes have no barbells or high-skill gymnastics.' },
+    ],
     image: '/imgs/ssc.jpg'
   },
   {
@@ -60,6 +89,20 @@ export const programs: Program[] = [
     slug: 'personal-training',
     shortDescription: 'Individualized programming and 1-on-1 attention for specific goals and accelerated results.',
     fullDescription: 'Our Personal Training program offers one-on-one personalized coaching tailored to your specific fitness goals. Includes custom programming, nutrition guidance, and individual attention from our certified personal trainers. Whether you are looking to lose weight, build muscle, prepare for competition, or rehabilitate an injury, our trainers will create a customized plan to help you achieve your goals.',
+    seoDescription: 'One-on-one personal training at our South Boston gym. Custom programming and nutrition guidance, $99 per session.',
+    sections: [
+      { heading: 'Who personal training is for', text: 'One-on-one coaching at our South Boston gym for beginners who want individual attention, members working on a specific skill or lift, and anyone training toward a goal such as losing weight, building muscle or preparing for a competition.' },
+      { heading: "What's included", text: 'Each program is built around you, with one-on-one coaching, custom programming, nutrition guidance and individual attention from our trainers.', link: { label: 'Meet our coaches', href: '/team' } },
+      { heading: 'Personal training pricing', text: 'Personal training is $99 per session.', link: { label: 'See all pricing', href: '/pricing' } },
+      { heading: 'How to get started', text: 'Email info@crossfitsouthie.com and tell us your goals and the times that work for you.', link: { label: 'Email us', href: 'mailto:info@crossfitsouthie.com?subject=Personal%20Training' } },
+      { heading: 'Related one-on-one services', text: 'We also offer nutrition coaching with Coach Bobby Kasmire, and physical therapy with Carly Stote, DPT, whose practice is inside our gym.', link: { label: 'Physical therapy', href: '/programs/physical-therapy' } },
+      { heading: 'Visit our South Boston gym', text: 'We are at 383 Dorchester Ave Front in South Boston, with two large shared parking lots. Staffed hours are Monday to Thursday 5am to 8pm, Friday 5am to 7pm, Saturday 7am to 1pm and Sunday 9am to 12pm.', link: { label: 'Get directions', href: '/contact' } },
+    ],
+    faqs: [
+      { q: 'How much is a personal training session?', a: 'Sessions are $99 each.' },
+      { q: 'Is personal training good for beginners?', a: 'Yes. Your trainer builds the plan around your experience and goals.' },
+      { q: 'How do I book a session?', a: 'Email info@crossfitsouthie.com to get set up.' },
+    ],
     image: '/imgs/personaltraining.png'
   },
   {

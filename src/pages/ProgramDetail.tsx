@@ -115,6 +115,36 @@ export const ProgramDetail = () => {
           )}
         </div>
       </section>
+      {program.sections && (
+        <section className="pb-20 px-4" style={{ backgroundColor: '#0c1322' }}>
+          <div className="max-w-2xl mx-auto">
+            {program.sections.map((section) => (
+              <div key={section.heading} className="mb-10">
+                <h2 className="text-2xl font-bold mb-3 text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>{section.heading}</h2>
+                <p className="text-lg leading-relaxed" style={{ color: 'rgba(220, 226, 247, 0.8)' }}>{section.text}</p>
+                {section.link && (
+                  section.link.href.startsWith('/') ? (
+                    <Link to={section.link.href} className="inline-block mt-2 font-bold underline" style={{ color: '#dc2626' }}>{section.link.label}</Link>
+                  ) : (
+                    <a href={section.link.href} className="inline-block mt-2 font-bold underline" style={{ color: '#dc2626' }}>{section.link.label}</a>
+                  )
+                )}
+              </div>
+            ))}
+            {program.faqs && (
+              <>
+                <h2 className="text-2xl font-bold mb-4 text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Common questions</h2>
+                {program.faqs.map((faq) => (
+                  <div key={faq.q} className="mb-5">
+                    <h3 className="text-lg font-bold mb-1 text-white">{faq.q}</h3>
+                    <p className="text-lg" style={{ color: 'rgba(220, 226, 247, 0.8)' }}>{faq.a}</p>
+                  </div>
+                ))}
+              </>
+            )}
+          </div>
+        </section>
+      )}
       {children.length > 0 && (
         <section className="pb-20 px-4" style={{ backgroundColor: '#0c1322' }}>
           <div className="max-w-6xl mx-auto">

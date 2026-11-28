@@ -18,9 +18,10 @@ export const Hero = () => (
         EVERYDAY<br/>
         <span style={{ color: '#dc2626' }}>ATHLETE</span>
       </h1>
-      <p className="text-xl sm:text-2xl md:text-3xl font-black uppercase tracking-tight mb-3 text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-black uppercase tracking-tight mb-3 text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+        <span className="block">South Boston Gym</span>{' '}
         CrossFit <span style={{ color: '#dc2626' }}>+</span> STRIVE
-      </p>
+      </h2>
       <p className="text-base sm:text-lg md:text-2xl mb-6 sm:mb-10 max-w-2xl leading-relaxed text-white">
         Two ways to train, one community. CrossFit for barbells, gymnastics and conditioning. STRIVE for HIIT, strength and HYROX with no barbells or high-skill gymnastics. Every class scales to you.
       </p>
