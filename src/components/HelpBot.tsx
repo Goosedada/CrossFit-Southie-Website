@@ -3,23 +3,27 @@ import { useState, type CSSProperties, type FormEvent } from "react";
 // Edit answers here. Keywords decide which answer a typed question gets.
 const EMAIL = "info@crossfitsouthie.com";
 
-type Topic = { label: string; keys: string[]; answer: string; link?: [string, string] };
+type Topic = { label: string; keys: string[]; answer: string; link?: [string, string]; more?: [string, string] };
 
 const TOPICS: Topic[] = [
   { label: "Free class", keys: ["free", "trial", "try", "first", "intro", "start", "book", "sign up"],
     answer: "Your first class is a complimentary intro session. Arrive 5 to 10 minutes early, wear workout gear and bring a water bottle.", link: ["Book free trial", "https://crossfitsouthie.sites.zenplanner.com/freeTrial.cfm"] },
+  { label: "Drop-ins", keys: ["drop", "visit", "visiting", "town", "week pass", "day pass", "class pack", "punch"],
+    answer: `Drop-ins are $30 each. Visiting from out of town? There is also a $75 week pass. To reserve and pay for a drop-in, pick a CrossFit or Open Gym option on the schedule. Class packs are on the pricing page.`, link: ["Schedule", "https://crossfitsouthie.sites.zenplanner.com/calendar.cfm"] },
   { label: "Personal training", keys: ["personal", "private", "one on one", "1-on-1"],
     answer: `Personal training sessions are $99 each. To get set up, email ${EMAIL}.`, link: ["Details", "/programs/personal-training/"] },
-  { label: "Pricing", keys: ["price", "pricing", "cost", "much", "membership", "month", "cancel", "fee", "rate", "drop"],
-    answer: "Plans are monthly and cancel anytime. CrossFit is $149 to $249 a month, Strive and HYROX $125 to $175, and Fundamentals $99. Drop-ins are $30.", link: ["See pricing", "/pricing/"] },
+  { label: "Pricing", keys: ["price", "pricing", "cost", "much", "membership", "month", "cancel", "fee", "rate"],
+    answer: "Plans are monthly and cancel anytime. CrossFit + Strive is $149 to $249 a month, Strive Only is $125 to $175, and CrossFit Fundamentals is $99.", link: ["See pricing", "/pricing/"] },
   { label: "Hours", keys: ["hour", "open", "close", "time", "schedule", "24"],
-    answer: "Staffed hours: Mon to Thu 5am to 8pm, Fri 5am to 7pm, Sat 7am to 1pm, Sun 9am to 12pm. 24-hour access is a $10 monthly add-on. Class times vary, so check the schedule." },
+    answer: "Staffed hours: Mon to Thu 5am to 8pm, Fri 5am to 7pm, Sat 7am to 1pm, Sun 9am to 12pm. 24-hour access is a $10 monthly add-on. Class times vary, so check the schedule.", link: ["Schedule", "https://crossfitsouthie.sites.zenplanner.com/calendar.cfm"] },
   { label: "Beginners", keys: ["beginner", "new", "never", "fundamental", "shape", "experience"],
-    answer: "New to this? Fundamentals builds your foundation and teaches proper movement patterns before you join regular classes.", link: ["Fundamentals", "/programs/fundamentals/"] },
+    answer: "New to this? All levels are welcome. Fundamentals teaches the basic CrossFit movements before you join regular classes. It runs Mondays and Thursdays at 7pm, except holidays.", link: ["Fundamentals", "/programs/fundamentals/"] },
   { label: "Classes", keys: ["class", "program", "hyrox", "hiit", "strive", "strength", "crossfit"],
-    answer: "We offer CrossFit, HYROX, Strive-X HIIT, Strength & Conditioning, Fundamentals and Personal Training.", link: ["What to expect", "/what-to-expect/"] },
-  { label: "Location", keys: ["where", "location", "address", "located", "direction"],
-    answer: "We're at 383 Dorchester Ave Front, Boston, MA 02127, in South Boston.", link: ["Contact page", "/contact/"] },
+    answer: "We offer CrossFit, STRIVE HIIT, STRIVE Strength & Conditioning, STRIVE HYROX, Fundamentals and Personal Training.", link: ["What to expect", "/what-to-expect/"] },
+  { label: "Nutrition & PT", keys: ["nutrition", "diet", "physical therap", "physio", "injur", "rehab", "pain"],
+    answer: "We have 1-on-1 nutrition coaching with Coach Bobby Kasmire, and strength and sports physical therapy with Carly Stote, DPT, inside our gym.", link: ["Nutrition", "/programs/nutrition-coaching/"], more: ["Physical therapy", "/programs/physical-therapy/"] },
+  { label: "Location", keys: ["where", "location", "address", "located", "direction", "park"],
+    answer: "We're at 383 Dorchester Ave Front, Boston, MA 02127, in South Boston. We have two large shared parking lots.", link: ["Contact page", "/contact/"] },
   { label: "Coaches", keys: ["coach", "trainer", "staff"],
     answer: "Meet the people who run our classes on the coaches page.", link: ["Our coaches", "/team/"] },
 ];
@@ -73,6 +77,7 @@ export default function HelpBot() {
                 {t.answer}{" "}
                 {t.link ? <a href={t.link[1]} style={{ color: "#b91c1c", fontWeight: 700 }}>{t.link[0]}</a>
                   : <a href={`mailto:${EMAIL}`} style={{ color: "#b91c1c", fontWeight: 700 }}>Email us</a>}
+                {t.more && <> · <a href={t.more[1]} style={{ color: "#b91c1c", fontWeight: 700 }}>{t.more[0]}</a></>}
               </div>
             </div>
           ))}
