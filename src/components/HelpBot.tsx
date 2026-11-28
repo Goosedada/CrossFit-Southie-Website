@@ -13,7 +13,7 @@ const TOPICS: Topic[] = [
   { label: "Personal training", keys: ["personal", "private", "one on one", "1-on-1"],
     answer: `Personal training sessions are $99 each. To get set up, email ${EMAIL}.`, link: ["Details", "/programs/personal-training/"] },
   { label: "Pricing", keys: ["price", "pricing", "cost", "much", "membership", "month", "cancel", "fee", "rate"],
-    answer: "Plans are monthly and cancel anytime. CrossFit + Strive is $149 to $249 a month, Strive Only is $125 to $175, and CrossFit Fundamentals is $99.", link: ["See pricing", "/pricing/"] },
+    answer: "Plans are monthly and cancel anytime. CrossFit + Strive is $149 to $249 a month, Strive Only is $119 to $175, and CrossFit Fundamentals is $99.", link: ["See pricing", "/pricing/"] },
   { label: "Hours", keys: ["hour", "open", "close", "time", "schedule", "24"],
     answer: "Staffed hours: Mon to Thu 5am to 8pm, Fri 5am to 7pm, Sat 7am to 1pm, Sun 9am to 12pm. 24-hour access is a $10 monthly add-on. Class times vary, so check the schedule.", link: ["Schedule", "https://crossfitsouthie.sites.zenplanner.com/calendar.cfm"] },
   { label: "Beginners", keys: ["beginner", "new", "never", "fundamental", "shape", "experience"],

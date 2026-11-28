@@ -55,7 +55,7 @@ export const PricingPage = () => {
     },
     {
       name: '3X/week',
-      price: '$150',
+      price: '$149',
       period: '/month',
       features: [
         '3 HIIT, SSC & HYROX classes per week',
@@ -66,7 +66,7 @@ export const PricingPage = () => {
     },
     {
       name: '2X/week',
-      price: '$125',
+      price: '$119',
       period: '/month',
       features: [
         '2 HIIT, SSC & HYROX classes per week',
@@ -113,7 +113,7 @@ export const PricingPage = () => {
     },
     {
       name: '10 CLASS PACK',
-      price: '$180',
+      price: '$179',
       period: '/pack',
       features: [
         '10 classes',

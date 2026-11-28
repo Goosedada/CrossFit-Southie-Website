@@ -19,7 +19,7 @@ export const FAQ = () => {
     },
     {
       question: "What are your membership options?",
-      answer: "We have CROSSFIT + STRIVE memberships, STRIVE ONLY memberships (STRIVE HIIT, STRIVE Strength & Conditioning, and STRIVE HYROX), and CrossFit Fundamentals. Plans are monthly and cancel anytime. CROSSFIT + STRIVE memberships range from $149/month for 2 classes per week to $249/month for unlimited. STRIVE ONLY memberships range from $125/month for 2 classes per week to $175/month for unlimited. CrossFit Fundamentals is $99/month. Drop-in classes are $30 each. See the full pricing page for details."
+      answer: "We have CROSSFIT + STRIVE memberships, STRIVE ONLY memberships (STRIVE HIIT, STRIVE Strength & Conditioning, and STRIVE HYROX), and CrossFit Fundamentals. Plans are monthly and cancel anytime. CROSSFIT + STRIVE memberships range from $149/month for 2 classes per week to $249/month for unlimited. STRIVE ONLY memberships range from $119/month for 2 classes per week to $175/month for unlimited. CrossFit Fundamentals is $99/month. Drop-in classes are $30 each. See the full pricing page for details."
     },
     {
       question: "Do you offer personal training?",
