@@ -24,6 +24,13 @@ export const WhatToExpectPage = () => {
           <p className="text-lg" style={{ color: 'rgba(220, 226, 247, 0.8)' }}>
             Your guide to starting your fitness journey at CrossFit Southie
           </p>
+          <img
+            src="/imgs/personal.jpg"
+            alt="Coach helping an athlete with an overhead squat at CrossFit Southie"
+            width={596}
+            height={600}
+            className="mt-6 w-full max-w-xl h-auto mx-auto rounded-xl"
+          />
         </div>
       </section>
 
